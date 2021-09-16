@@ -73,7 +73,8 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-       'virtual': ['Virtual', ...defaultTheme.fontFamily.serif]
+       'virtual': ['Virtual', ...defaultTheme.fontFamily.serif],
+       'cooper-hewitt': ['CooperHewitt', ...defaultTheme.fontFamily.sans]
       },
     },
   },

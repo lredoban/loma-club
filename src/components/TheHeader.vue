@@ -39,7 +39,7 @@
         </div>
         <div class="flex items-center">
           <div class="flex-shrink-0">
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdTTni-qxWU-jByhivYMF8cXS89HzK0xmoEzQJgmll6y-Xq4g/viewform?usp=sf_link" rel="noopener" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <a :href="formUrl" rel="noopener" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               S'inscrire
             </a>
           </div>
@@ -82,4 +82,5 @@ const links = [
   { text: 'À propos', to: '/josepha-raphard' },
   { text: 'Les sessions', to: '/#' },
 ]
+const formUrl = import.meta.env.VITE_FORM_URL
 </script>
