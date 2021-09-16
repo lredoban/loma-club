@@ -80,7 +80,7 @@ import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 const links = [
   { text: 'Accueil', to: '/' },
   { text: 'À propos', to: '/josepha-raphard' },
-  { text: 'Les sessions', to: '/#' },
+  { text: 'Les sessions', to: '/sessions' },
 ]
 const formUrl = import.meta.env.VITE_FORM_URL
 </script>
