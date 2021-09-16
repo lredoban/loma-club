@@ -1,7 +1,7 @@
 <template>
   <main>
     <div
-      class="px-4 py-6 mt-10  sm:px-0 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
+      class="px-4 py-6 mt-10 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28"
     >
       <div class="sm:text-center lg:text-left">
         <h2
@@ -24,8 +24,7 @@
           Qui est Josépha ?
         </h2>
         <p
-          class="mt-3 text-base text-gray-500  sm:mt-5 sm:
-          text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+          class="mt-3 text-base text-gray-500  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
         >
           Le Loma Club est né un soir de mai 2020, quelques mois après ma fille Paloma.<br>
           En devenant mère j’ai eu envie d’échanger avec d’autres femmes qui comprenaient ce que je vivais, je voulais des échanges plus profonds que ceux que l’on peut parfois avoir avec notre entourages ou avec les autres mères rencontrées sur Instagram. Je souhaitais un espace sans jugement où on peut tout se dire et où on peut tout entendre.<br>
