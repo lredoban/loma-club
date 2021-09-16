@@ -1,16 +1,19 @@
 <template>
   <main>
-    <div class="px-4 py-6 sm:px-0">
-      <div
-        class="p-4 text-center text-gray-400 border-4 border-gray-200 border-dashed rounded-lg  h-96"
-      >
-        Here goes your content. You can also go the
-        <router-link
-          to="/about"
-          class="text-indigo-600 underline hover:text-indigo-500"
-          >About page</router-link
-        >.
-      </div>
-    </div>
+    <Hero/>
+    <CTASection/>
+    <Features/>
+    <TestimonialsSection/>
+    <MediasSections/>
+    <FAQSection id="faq"/>
   </main>
 </template>
+
+<script setup>
+import CTASection from '../components/CTASection.vue'
+import FAQSection from '../components/FAQSection.vue'
+import Features from '../components/Features.vue'
+import Hero from '../components/Hero.vue'
+import MediasSections from '../components/MediasSections.vue'
+import TestimonialsSection from '../components/TestimonialsSection.vue'
+</script>

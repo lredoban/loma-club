@@ -7,55 +7,39 @@
         <h2
           class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900  sm:text-5xl sm:leading-none md:text-6xl"
         >
-          This demo is using
-          <br class="xl:hidden" />
-          <a
-            target="_blank"
-            class="text-indigo-600 underline hover:text-indigo-500"
-            href="https://tailwindcss.com"
-            >Tailwind CSS</a
-          >
+          L’histoire du Loma Club
         </h2>
         <p
           class="mt-3 text-base text-gray-500  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
         >
-          All the code present here is part of a free sample from
-          <a
-            href="https://tailwindui.com"
-            class="text-indigo-600 underline hover:text-indigo-500"
-            >Tailwind UI</a
-          >
-          but, you don't need it. If you want to add
-          <b>Tailwind UI </b>&#32; check the instructions on
-          <a
-            class="text-indigo-600 underline hover:text-indigo-500"
-            href="https://github.com/posva/vite-tailwind-starter/tree/master#vite--tailwind-css-starter"
-            ><code>README</code></a
-          >. It only takes two steps to add it 🙂.
+          J’ai 27 ans et je suis la maman de Paloma née en Janvier 2020. <br>
+          Avant le Loma Club j’ai réalisé deux séries documentaires <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=6cyUCrBavpw&list=PLOWXUCzoqZ2LTEDo_it6NaT12EHP_fpBS">MEUFS</a> et <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=UhDdx38Mk9k&list=PLOWXUCzoqZ2L7C5ayx7nBxcgJJ0QPcd3-">MERES</a>, toutes les deux disponibles sur YouTube. <br>
+          J’écris également autour de la femme, de nos corps et de la maternité. <br>
         </p>
-        <div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-          <div class="rounded-md shadow">
-            <a
-              href="https://github.com/posva/vite-tailwind-starter"
-              class="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md  hover:bg-indigo-500 focus:outline-none focus:ring md:py-4 md:text-lg md:px-10"
-            >
-              Get started
-            </a>
-          </div>
-          <div class="mt-3 sm:mt-0 sm:ml-3">
-            <a
-              href="#"
-              class="flex items-center justify-center w-full px-8 py-3 text-base font-medium leading-6 text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-transparent rounded-md  hover:text-indigo-600 hover:bg-indigo-50 focus:outline-none focus:ring focus:border-indigo-300 md:py-4 md:text-lg md:px-10"
-            >
-              Live demo
-            </a>
-          </div>
-        </div>
+      </div>
+      <div class="sm:text-center lg:text-left">
+        <h2
+          class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900  sm:text-5xl sm:leading-none md:text-6xl"
+        >
+          Qui est Josépha ?
+        </h2>
+        <p
+          class="mt-3 text-base text-gray-500  sm:mt-5 sm:
+          text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+        >
+          Le Loma Club est né un soir de mai 2020, quelques mois après ma fille Paloma.<br>
+          En devenant mère j’ai eu envie d’échanger avec d’autres femmes qui comprenaient ce que je vivais, je voulais des échanges plus profonds que ceux que l’on peut parfois avoir avec notre entourages ou avec les autres mères rencontrées sur Instagram. Je souhaitais un espace sans jugement où on peut tout se dire et où on peut tout entendre.<br>
+          J’ai eu l’idée du Loma Club un soir après avoir participé à un cercle de parole organisé par une doula. J’avais envie d’aller plus loin, de voir des profils différents de femmes, de pouvoir rencontrer des femmes qui ne participent pas à ces cercles là. A cette époque je regardais la série Working Mum qui m’a aussi beaucoup inspiré.<br>
+          Après plusieurs mois à animer des cercles de parole test avec des mamans volontaires et dont les retours m’ont été plus que bénéfiques, j’ai lancé le Loma Club en août 2020. Le bouche à oreille a fonctionné, le réseau s’est agrandit et nous voila un an plus tard.<br>
+        </p>
+      </div>
+      <div class="sm:text-center lg:text-left">
+        <h2
+          class="text-4xl font-extrabold leading-10 tracking-tight text-gray-900  sm:text-5xl sm:leading-none md:text-6xl"
+        >
+          Meufs & Méres
+        </h2>
       </div>
     </div>
   </main>
 </template>
-
-<script>
-export default {}
-</script>
