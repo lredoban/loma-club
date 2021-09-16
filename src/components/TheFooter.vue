@@ -19,7 +19,7 @@
 const navigation = {
   main: [
     { name: '@josepha_raphard', href: 'https://www.instagram.com/josepha_raphard/?hl=fr' },
-    { name: "S'inscrire", href: 'https://docs.google.com/forms/d/e/1FAIpQLSdTTni-qxWU-jByhivYMF8cXS89HzK0xmoEzQJgmll6y-Xq4g/viewform?usp=sf_link' },
+    { name: "S'inscrire", href: import.meta.env.VITE_FORM_URL },
     { name: 'Mentions légales & CGV', href: '#' },
     { name: 'Témoignages', href: '#' },
     { name: 'Média', href: '#' },
