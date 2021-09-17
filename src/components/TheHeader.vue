@@ -37,7 +37,12 @@
                 </router-link>
           </div>
         </div>
-        <div class="flex items-center">
+        <div class="flex items-center space-x-4">
+          <div class="hidden flex-shrink-0 md:block">
+            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-white shadow-sm  ring-2 ring-indigo-500 hover:bg-indigo-200 focus:outline-none">
+              Se connecter
+            </a>
+          </div>
           <div class="flex-shrink-0">
             <a :href="formUrl" rel="noopener" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
               S'inscrire
@@ -69,6 +74,11 @@
           >
         </router-link>
       </div>
+      <div class="pt-4 pb-3 border-t border-gray-200">
+        <div class="space-y-1">
+          <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 sm:px-6">Se connecter</a>
+        </div>
+      </div>
     </DisclosurePanel>
   </Disclosure>
 </template>
@@ -79,8 +89,8 @@ import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const links = [
   { text: 'Accueil', to: '/' },
-  { text: 'À propos', to: '/josepha-raphard' },
-  { text: 'Les sessions', to: '/sessions' },
+  { text: 'À propos', to: '/a-propos' },
+  { text: 'Planning', to: '/planning' },
 ]
 const formUrl = import.meta.env.VITE_FORM_URL
 </script>

@@ -1,6 +1,6 @@
 <template>
   <h2 class="text-2xl">
-    Les Sessions
+    Le planning
   </h2>
   <ul v-if="sessions.length">
     <li v-for="session in sessions" :key="session">
