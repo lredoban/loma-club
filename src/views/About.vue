@@ -10,7 +10,7 @@
           L’histoire du Loma Club
         </h2>
         <p
-          class="mt-3 text-base text-gray-500  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+          class="mt-3 text-base text-gray-700  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
         >
           J’ai 27 ans et je suis la maman de Paloma née en Janvier 2020. <br>
           Avant le Loma Club j’ai réalisé deux séries documentaires <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=6cyUCrBavpw&list=PLOWXUCzoqZ2LTEDo_it6NaT12EHP_fpBS">MEUFS</a> et <a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=UhDdx38Mk9k&list=PLOWXUCzoqZ2L7C5ayx7nBxcgJJ0QPcd3-">MERES</a>, toutes les deux disponibles sur YouTube. <br>
@@ -24,7 +24,7 @@
           Qui est Josépha ?
         </h2>
         <p
-          class="mt-3 text-base text-gray-500  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
+          class="mt-3 text-base text-gray-700  sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0"
         >
           Le Loma Club est né un soir de mai 2020, quelques mois après ma fille Paloma.<br>
           En devenant mère j’ai eu envie d’échanger avec d’autres femmes qui comprenaient ce que je vivais, je voulais des échanges plus profonds que ceux que l’on peut parfois avoir avec notre entourages ou avec les autres mères rencontrées sur Instagram. Je souhaitais un espace sans jugement où on peut tout se dire et où on peut tout entendre.<br>

@@ -5,14 +5,16 @@
         <div class="flex">
           <div class="-ml-2 mr-2 flex items-center md:hidden">
             <!-- Mobile menu button -->
-            <DisclosureButton class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+            <DisclosureButton class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-ocre">
               <span class="sr-only">Open main menu</span>
               <MenuIcon v-if="!open" class="block h-6 w-6" aria-hidden="true" />
               <XIcon v-else class="block h-6 w-6" aria-hidden="true" />
             </DisclosureButton>
           </div>
           <div class="flex-shrink-0 flex items-center">
-            <router-link to="/" class="font-virtual text-6xl">Loma</router-link>
+            <router-link to="/">
+              <img src="/img/logos/logo-nude.png"  alt="Loma Logo Nude" class="h-10"/>
+            </router-link>
           </div>
           <div class="hidden md:ml-6 md:flex md:space-x-8">
 
@@ -29,8 +31,8 @@
                     class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
                     :class="[
                       isExactActive
-                        ? 'border-indigo-500 text-gray-900'
-                        : 'border-transparent text-gray-500 hover:border-gray-300 hover:text-gray-700'
+                        ? 'border-ocre text-ocre'
+                        : 'border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-700'
                     ]"
                     >{{ link.text }}</a
                   >
@@ -39,12 +41,12 @@
         </div>
         <div class="flex items-center space-x-4">
           <div class="hidden flex-shrink-0 md:block">
-            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-indigo-600 bg-white shadow-sm  ring-2 ring-indigo-500 hover:bg-indigo-200 focus:outline-none">
+            <a href="#" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-ocre bg-white shadow-sm  ring-2 ring-ocre hover:bg-ocre hover:bg-opacity-10 focus:outline-none">
               Se connecter
             </a>
           </div>
           <div class="flex-shrink-0">
-            <a :href="formUrl" rel="noopener" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+            <a :href="formUrl" rel="noopener" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-ocre shadow-sm hover:bg-ocre hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ocre">
               S'inscrire
             </a>
           </div>
@@ -67,8 +69,8 @@
             class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
             :class="[
               isExactActive
-                ? 'bg-indigo-50 border-indigo-500 text-indigo-700'
-                : 'border-transparent text-gray-500 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
+                ? 'bg-indigo-50 border-ocre text-ocre'
+                : 'border-transparent text-gray-700 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
             ]"
             >{{ link.text }}</a
           >
@@ -76,7 +78,7 @@
       </div>
       <div class="pt-4 pb-3 border-t border-gray-200">
         <div class="space-y-1">
-          <a href="#" class="block px-4 py-2 text-base font-medium text-gray-500 hover:text-gray-800 hover:bg-gray-100 sm:px-6">Se connecter</a>
+          <a href="#" class="block px-4 py-2 text-base font-medium text-gray-700 hover:text-gray-700 hover:bg-gray-100 sm:px-6">Se connecter</a>
         </div>
       </div>
     </DisclosurePanel>
