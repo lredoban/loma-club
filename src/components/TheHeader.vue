@@ -69,7 +69,7 @@
             class="block pl-3 pr-4 py-2 border-l-4 text-base font-medium sm:pl-5 sm:pr-6"
             :class="[
               isExactActive
-                ? 'bg-indigo-50 border-ocre text-ocre'
+                ? 'bg-gray-100 border-ocre text-ocre'
                 : 'border-transparent text-gray-700 hover:bg-gray-50 hover:border-gray-300 hover:text-gray-700'
             ]"
             >{{ link.text }}</a
