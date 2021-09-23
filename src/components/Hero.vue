@@ -13,9 +13,9 @@
         </div>
       </div>
       <div class="relative w-full p-6 grid grid-cols-3 grid-rows-3 sm:h-72 md:h-[48rem] lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
-        <img src="/img/hero-illu/Mama left.svg" alt="Maman allaitant pendant une visio" class="row-start-2" :style="styleMamaLeft"/>
-        <img src="/img/hero-illu/Mama top.svg" alt="Maman croisant les bras pendant une visio" class="col-start-2" :style="styleMamaTop"/>
-        <img src="/img/hero-illu/Mama right.svg" alt="Maman portant son bébé pendant une visio" class="row-start-2 col-start-3" :style="styleMamaRight"/>
+        <img src="/img/hero-illu/Mamaleft.svg" alt="Maman allaitant pendant une visio" class="row-start-2" :style="styleMamaLeft"/>
+        <img src="/img/hero-illu/Mamatop.svg" alt="Maman croisant les bras pendant une visio" class="col-start-2" :style="styleMamaTop"/>
+        <img src="/img/hero-illu/Mamaright.svg" alt="Maman portant son bébé pendant une visio" class="row-start-2 col-start-3" :style="styleMamaRight"/>
         <img src="/img/hero-illu/Josepha.svg" alt="Josépha Raphard" class="col-start-2 row-span-2 self-center scale-110 translate-y-8" :style="styleJosepha"/>
       </div>
     </main>
