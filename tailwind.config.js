@@ -20,6 +20,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      content: {
+        quote: "'\"'"
+      },
       colors: {
         creme: "#F4DFCE",
         beige: "#EFC19D",

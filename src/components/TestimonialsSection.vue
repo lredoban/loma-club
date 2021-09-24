@@ -17,8 +17,8 @@
                     <p class="text-ocre">{{ person.kids }}</p>
                     <p class="text-ocre font-light">{{ person.membership }}</p>
                   </div>
-                  <div class="">
-                    <p class="text-gray-800" v-html="person.quote"></p>
+                  <div>
+                    <p class="pl-4 text-gray-800 relative italic before:absolute before:top-0 before:left-0 before:-ml-7 before:-mt-3 before:text-9xl before:text-ocre before:font-virtual before:content-quote" v-html="person.quote"></p>
                   </div>
                 </div>
               </div>

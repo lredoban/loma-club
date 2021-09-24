@@ -34,7 +34,7 @@
     },
     {
       name: 'Maison Louno',
-      imageSrc: 'https://images.squarespace-cdn.com/content/v1/59e4717f914e6b0711a3feb3/1510860583812-8OI0EAJZZYUPOWKXPRR7/MaisonLOUNO-OK.png?format=1500w',
+      imageSrc: '/img/MaisonLouno.png',
       link: 'https://www.maisonlouno.com/journal/2021/9/7/jospha-raphard-fondatrice-de-loma-club'
     },
     {
