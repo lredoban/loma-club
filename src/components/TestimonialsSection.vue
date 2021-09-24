@@ -7,8 +7,8 @@
         <ul role="list" class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
           <li v-for="person in people" :key="person.name">
             <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-              <div class="h-0 aspect-w-3 aspect-h-2 rounded-lg sm:aspect-w-3 sm:aspect-h-4 overflow-hidden">
-                <img class="object-cover object-top shadow-lg  sm:object-center hover:scale-110 transition duration-500" :src="person.imageUrl" :alt="'Mama ' + person.name" />
+              <div class="h-0 aspect-w-3 aspect-h-2 rounded-lg bg-creme sm:aspect-w-3 sm:aspect-h-4 overflow-hidden">
+                <img class="object-cover object-top shadow-lg transition duration-500 grayscale mix-blend-multiply sm:object-center hover:scale-110" :src="person.imageUrl" :alt="'Mama ' + person.name" />
               </div>
               <div class="sm:col-span-2">
                 <div class="space-y-4">
