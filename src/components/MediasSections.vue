@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-ocre">
+  <div class="bg-ocre shadow">
     <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold text-white">
         On parle du Loma Club
@@ -44,3 +44,9 @@
     }
   ]
 </script>
+
+<style lang="sass" scoped>
+.shadow
+  background-image: radial-gradient(#db754a 1px, #d4805c 1px)
+  background-size: 5px 5px
+</style>

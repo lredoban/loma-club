@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 bg-creme">
+  <div class="py-12 bg-creme shadow">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
         <div v-for="feature in features" :key="feature.name">
@@ -50,3 +50,9 @@ export default {
   },
 }
 </script>
+
+<style lang="sass" scoped>
+.shadow
+  background-image: radial-gradient(#e7cdb570 1px, #f4dfce 1px)
+  background-size: 5px 5px
+</style>
