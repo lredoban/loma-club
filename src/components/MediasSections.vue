@@ -33,9 +33,9 @@
       link: 'https://www.popote-bebe.fr/lemag/josepha-raphard/'
     },
     {
-      name: 'AuFeminin',
-      imageSrc: 'https://assets.afcdn.com/brand/aufeminin/icon.png',
-      link: 'https://www.aufeminin.com/bebe/elle-sera-toujours-la-meuf-la-plus-cool-qu-elle-mette-une-robe-ou-un-costume-de-spider-man-le-message-fort-de-cette-maman-sur-la-maniere-d-habiller-sa-fille-s4020888.html'
+      name: 'Maison Louno',
+      imageSrc: 'https://images.squarespace-cdn.com/content/v1/59e4717f914e6b0711a3feb3/1510860583812-8OI0EAJZZYUPOWKXPRR7/MaisonLOUNO-OK.png?format=1500w',
+      link: 'https://www.maisonlouno.com/journal/2021/9/7/jospha-raphard-fondatrice-de-loma-club'
     },
     {
       name: 'Period Studio',

@@ -7,18 +7,18 @@
         <ul role="list" class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
           <li v-for="person in people" :key="person.name">
             <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-              <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                <img class="object-cover object-top shadow-lg rounded-lg sm:object-center" :src="person.imageUrl" :alt="'Mama ' + person.name" />
+              <div class="h-0 aspect-w-3 aspect-h-2 rounded-lg sm:aspect-w-3 sm:aspect-h-4 overflow-hidden">
+                <img class="object-cover object-top shadow-lg  sm:object-center hover:scale-110 transition duration-500" :src="person.imageUrl" :alt="'Mama ' + person.name" />
               </div>
               <div class="sm:col-span-2">
                 <div class="space-y-4">
-                  <div class="text-lg leading-6 font-medium space-y-1">
+                  <div class="text-lg leading-none font-medium space-y-1">
                     <h3 class="text-2xl">{{ person.name }}</h3>
                     <p class="text-ocre">{{ person.kids }}</p>
-                    <p class="font-light">{{ person.membership }}</p>
+                    <p class="text-ocre font-light">{{ person.membership }}</p>
                   </div>
                   <div class="">
-                    <p class="text-gray-700" v-html="person.quote"></p>
+                    <p class="text-gray-800" v-html="person.quote"></p>
                   </div>
                 </div>
               </div>

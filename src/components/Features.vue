@@ -4,12 +4,12 @@
       <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
         <div v-for="feature in features" :key="feature.name">
           <dt>
-            <div class="flex items-center justify-center h-12 w-12 rounded-md bg-ocre text-white">
-              <component :is="feature.icon" class="h-6 w-6" aria-hidden="true" />
+            <div class="flex items-center justify-center h-14 w-14">
+              <img :src="feature.iconUrl" :alt="feature.name" />
             </div>
-            <p class="mt-5 text-lg leading-6 font-medium text-gray-900">{{ feature.name }}</p>
+            <p class="mt-5 text-ocre text-lg leading-6 font-semibold tracking-widest">{{ feature.name }}</p>
           </dt>
-          <dd class="mt-2 text-base text-gray-700">
+          <dd class="mt-2 text-base text-gray-800">
             {{ feature.description }}
           </dd>
         </div>
@@ -19,26 +19,24 @@
 </template>
 
 <script>
-import { DesktopComputerIcon, HeartIcon, ChatAlt2Icon } from '@heroicons/vue/outline'
-
 const features = [
   {
     name: 'Groupe de parole en visio',
     description:
       'Les groupes de paroles s’effectuent sur zoom et ce peu importe là où vous vous trouvez dans le monde.',
-    icon: DesktopComputerIcon,
+    iconUrl: '/img/pictoOrdi.png',
   },
   {
     name: 'Communauté instagram',
     description:
       'Un compte Instagram privé sur lequel il est possible de retrouver tous les membres de l’armée pacifique et d’échanger librement.',
-    icon: ChatAlt2Icon,
+    iconUrl: '/img/pictoChat.png',
   },
   {
     name: 'Des bons plans',
     description:
       'Contacts de gynéco, avis sur une marque, conseils sur la nourriture, conseils pour un trajet en voiture…',
-    icon: HeartIcon,
+    iconUrl: '/img/pictoCoeur.png',
   },
 ]
 
