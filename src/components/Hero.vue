@@ -12,10 +12,13 @@
         </div>
       </div>
       <div class="relative w-full p-6 grid grid-cols-3 grid-rows-3 sm:h-72 md:h-[48rem] lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
+        <div class="absolute inset-0 flex justify-center items-center">
+          <div class="w-full h-full rounded-full" :style="shadowStyle"></div>
+        </div>
         <img src="/img/hero-illu/MamaLeft.svg" alt="Maman allaitant pendant une visio" class="row-start-2" :style="styleMamaLeft"/>
         <img src="/img/hero-illu/MamaTop.svg" alt="Maman croisant les bras pendant une visio" class="col-start-2" :style="styleMamaTop"/>
         <img src="/img/hero-illu/MamaRight.svg" alt="Maman portant son bébé pendant une visio" class="row-start-2 col-start-3" :style="styleMamaRight"/>
-        <img src="/img/hero-illu/Josepha.svg" alt="Josépha Raphard" class="col-start-2 row-span-2 self-center scale-110 translate-y-8" :style="styleJosepha"/>
+        <img src="/img/hero-illu/Josepha.svg" alt="Josépha Raphard" class="col-start-2 row-span-2 self-center scale-110 translate-y-8 mix-blend-darken" :style="styleJosepha"/>
       </div>
     </main>
   </div>
@@ -59,4 +62,17 @@ const styleJosepha = computed(() => ({
     parallax.roll * 10
   }px) scale(${map(parallax.tilt + parallax.roll, -0.25, 0.25, 0.97, 1.03)})`
 }))
+const shadowStyle = computed(() => {
+  const gradientSize = map(parallax.tilt + parallax.roll, -0.25, 0.25, 4, 5)
+  const backgroundSize = map(parallax.tilt + parallax.roll, -0.25, 0.25, 8, 10)
+  return {
+  transition: '.4s ease-out all',
+  opacity: 0.02,
+  backgroundImage: `radial-gradient(transparent ${gradientSize}px, black ${gradientSize}px)`,
+  backgroundSize: `${backgroundSize}px ${backgroundSize}px`,
+  backgroundColor: 'transparent',
+  transform: `translateX(${parallax.tilt * 10}px) translateY(${
+    parallax.roll * 10
+  }px) scale(0.88)`
+}})
 </script>
