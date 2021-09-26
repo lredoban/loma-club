@@ -39,11 +39,11 @@ const faqs = [
   },
   {
       question: 'Comment s’inscrit-on ?',
-      answer: 'Pour s’inscrire à une session du Loma Club il faut d’abord être membre.<br>Une fois membre, vous avez un code qui vous permet d’accéder librement au planning des sessions et de choisir celle(s) qui vous plait.'
+      answer: 'Pour s’inscrire à une session du Loma Club il faut d’abord être membre.<br>Après avoir rempli le formulaire d’inscription vous recevez vos identifiants de membre sous 24h à 48h.<br>Vos identifiants vous permettent d’accéder librement au planning des sessions et vous pouvez ensuite sélectionner la ou les session(s) de votre choix.'
   },
   {
       question: 'Combien ça coûte ?',
-      answer: 'Chaque session du Loma Club est au prix de 22€.'
+      answer: 'Chaque session du Loma Club est au prix de 23€.'
   },
   {
     question: 'Les conditions d’adhésion au Loma Club',

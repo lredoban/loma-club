@@ -2,13 +2,14 @@
   <div class="bg-gray-100">
     <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
       <div class="space-y-12">
-        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Témoignages mamas loma club</h2>
+        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Témoignages</h2>
 
         <ul role="list" class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
           <li class="group" v-for="person in people" :key="person.name">
             <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-              <div class="h-0 aspect-w-3 aspect-h-2 rounded-lg bg-creme overflow-hidden sm:aspect-w-3 sm:aspect-h-4">
-                <img class="object-cover object-top shadow-lg transition duration-500 grayscale mix-blend-multiply sm:object-center group-hover:scale-110" :src="person.imageUrl" :alt="'Mama ' + person.name" />
+              <div class="relative h-0 aspect-w-3 aspect-h-2 rounded-lg shadow-lg overflow-hidden sm:aspect-w-3 sm:aspect-h-4">
+                <img class="object-cover object-top transition duration-500 grayscale sm:object-center group-hover:scale-110" :src="person.imageUrl" :alt="'Mama ' + person.name" />
+                <div class="absolute inset-0 bg-creme mix-blend-multiply opacity-40"></div>
               </div>
               <div class="sm:col-span-2">
                 <div class="space-y-4">
