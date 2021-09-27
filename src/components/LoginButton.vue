@@ -38,7 +38,7 @@
 
                     <div class="flex items-center justify-between">
                       <div class="text-sm">
-                        <button class="font-medium text-ocre hover:text-ocre" :disabled="loading" @click.prevent="reset">
+                        <button type="button" class="font-medium text-ocre hover:text-ocre" :disabled="loading" @click.prevent="reset">
                           Mot de passe oublié?
                         </button>
                       </div>
@@ -77,7 +77,6 @@ export default {
     Dialog,
     DialogOverlay,
     DialogTitle,
-    Notification,
     TransitionChild,
     TransitionRoot
   },
