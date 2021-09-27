@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-ocre">
+  <div class="bg-ocre shadow">
     <div class="max-w-7xl mx-auto py-16 px-4 sm:py-20 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-extrabold text-white">
         On parle du Loma Club
@@ -33,9 +33,9 @@
       link: 'https://www.popote-bebe.fr/lemag/josepha-raphard/'
     },
     {
-      name: 'AuFeminin',
-      imageSrc: 'https://assets.afcdn.com/brand/aufeminin/icon.png',
-      link: 'https://www.aufeminin.com/bebe/elle-sera-toujours-la-meuf-la-plus-cool-qu-elle-mette-une-robe-ou-un-costume-de-spider-man-le-message-fort-de-cette-maman-sur-la-maniere-d-habiller-sa-fille-s4020888.html'
+      name: 'Maison Louno',
+      imageSrc: '/img/MaisonLouno.png',
+      link: 'https://www.maisonlouno.com/journal/2021/9/7/jospha-raphard-fondatrice-de-loma-club'
     },
     {
       name: 'Period Studio',
@@ -44,3 +44,9 @@
     }
   ]
 </script>
+
+<style lang="sass" scoped>
+.shadow
+  background-image: radial-gradient(#db754a 1px, #d4805c 1px)
+  background-size: 5px 5px
+</style>

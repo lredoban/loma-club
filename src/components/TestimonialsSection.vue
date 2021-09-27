@@ -2,23 +2,24 @@
   <div class="bg-gray-100">
     <div class="mx-auto py-12 px-4 max-w-7xl sm:px-6 lg:px-8 lg:py-24">
       <div class="space-y-12">
-        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Témoignages mamas loma club</h2>
+        <h2 class="text-3xl font-extrabold tracking-tight sm:text-4xl">Témoignages</h2>
 
         <ul role="list" class="space-y-12 lg:grid lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-12 lg:space-y-0">
-          <li v-for="person in people" :key="person.name">
+          <li class="group" v-for="person in people" :key="person.name">
             <div class="space-y-4 sm:grid sm:grid-cols-3 sm:gap-6 sm:space-y-0 lg:gap-8">
-              <div class="h-0 aspect-w-3 aspect-h-2 sm:aspect-w-3 sm:aspect-h-4">
-                <img class="object-cover object-top shadow-lg rounded-lg sm:object-center" :src="person.imageUrl" :alt="'Mama ' + person.name" />
+              <div class="relative h-0 aspect-w-3 aspect-h-2 rounded-lg shadow-lg overflow-hidden sm:aspect-w-3 sm:aspect-h-4">
+                <img class="object-cover object-top transition duration-500 grayscale sm:object-center group-hover:scale-110" :src="person.imageUrl" :alt="'Mama ' + person.name" />
+                <div class="absolute inset-0 bg-creme mix-blend-multiply opacity-40"></div>
               </div>
               <div class="sm:col-span-2">
                 <div class="space-y-4">
-                  <div class="text-lg leading-6 font-medium space-y-1">
+                  <div class="text-lg leading-none font-medium space-y-1">
                     <h3 class="text-2xl">{{ person.name }}</h3>
                     <p class="text-ocre">{{ person.kids }}</p>
-                    <p class="font-light">{{ person.membership }}</p>
+                    <p class="text-ocre font-light">{{ person.membership }}</p>
                   </div>
-                  <div class="">
-                    <p class="text-gray-700" v-html="person.quote"></p>
+                  <div>
+                    <p class="pl-4 text-gray-800 relative italic before:absolute before:top-0 before:left-0 before:-ml-7 before:-mt-3 before:text-9xl before:text-ocre before:font-virtual before:content-quote" v-html="person.quote"></p>
                   </div>
                 </div>
               </div>

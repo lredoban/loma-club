@@ -3,6 +3,7 @@ import './assets/main.css'
 import App from './App.vue'
 import { routes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
+import Toaster from "@meforma/vue-toaster"
 
 let app = createApp(App)
 let router = createRouter({
@@ -28,5 +29,6 @@ if (import.meta.hot) {
 }
 
 app.use(router)
+app.use(Toaster)
 
 app.mount('#app')
