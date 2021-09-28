@@ -23,7 +23,7 @@ const features = [
   {
     name: 'Groupe de parole en visio',
     description:
-      'Les groupes de paroles s’effectuent sur zoom et ce peu importe là où vous vous trouvez dans le monde.',
+      'Les groupes de paroles s’effectuent sur zoom et durent 1 heure. Les sessions s\'articulent autour de thèmes tels que le post-partum, la reprise du travail, les relations avec sa famille/ belle famille, la sexualité, l\'envie de changer de voie professionnelle etc ... ',
     iconUrl: '/img/pictoOrdi.png',
   },
   {
