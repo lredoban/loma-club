@@ -67,6 +67,7 @@
 import { ref, inject } from 'vue'
 
 import useUser from '../user'
+import { useRouter } from 'vue-router'
 
 import { CheckIcon } from '@heroicons/vue/outline'
 import { Dialog, DialogOverlay, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
@@ -83,11 +84,12 @@ export default {
   props: { open: Boolean },
   setup(_, { emit }) {
     const form = ref(null)
-    const email = ref('')
     const emailRef = ref(null)
+    const email = ref('')
     const password = ref('')
     const loading = ref(false)
     const $toast = inject('$toast')
+    const router = useRouter()
     const { user, login, resetPassword } = useUser()
 
     const logUser = async () => {
@@ -96,6 +98,9 @@ export default {
       if (!form.value.checkValidity()) return
       await login(email.value, password.value)
         .then(_ => {
+          email.value = ''
+          password.value = ''
+          router.push('/planning')
           emit('close')
         })
         .catch(_ => {
