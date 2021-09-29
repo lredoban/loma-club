@@ -3,7 +3,12 @@
     <h1 class="text-5xl text-center absolute opacity-0">
       Le planning
     </h1>
-    <div class="divide-y-2 divide-dashed divide-opacity-20 divide-ocre">
+    <div v-if="sessions.length === 0" class="h-screen w-full flex items-center justify-center -mt-16 -mb-48">
+      <span class="animate-bounce -mt-24 text-4xl">
+        Chargement
+      </span>
+    </div>
+    <div v-else class="divide-y-2 divide-dashed divide-opacity-20 divide-ocre">
       <div v-for="(week, i) in weeks" :key="i">
         <ol class="my-12 grid grid-cols-2 gap-x-6 gap-y-16 justify-items-center md:grid-cols-3 lg:grid-cols-5">
           <li v-for="d in week" :key="d.dayOfYear" :class="today.isAfter(d.date) && 'opacity-30'">
@@ -20,7 +25,7 @@
 </template>
 
 <script>
-import { onMounted, ref, unref } from 'vue'
+import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import useUser from '../user'
 import dayjs from 'dayjs'
@@ -46,6 +51,7 @@ export default {
   },
   setup () {
     const weeks = ref([])
+    const sessions = ref([])
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
     const router = useRouter()
     const { isAuth } = useUser()
@@ -76,12 +82,13 @@ export default {
         router.replace('/')
         return
       }
-      // seedSessions(sessionsJson)
+      // sessions.value = sessionsJson
+      // seedSessions(sessions.value)
       fetch('/.netlify/functions/fetch-sessions').then(res => {
         if (res.ok) {
           res.json().then(data => {
-            const filteredSessions = data.sessions.filter(e => e.status === 'Live')
-            seedSessions(filteredSessions)
+            sessions.value = data.sessions.filter(e => e.status === 'Live')
+            seedSessions(sessions.value)
           })
         }
       })
@@ -89,8 +96,9 @@ export default {
 
     return {
       dateOptions,
-      weeks,
-      today: now
+      sessions,
+      today: now,
+      weeks
     }
   }
 }
