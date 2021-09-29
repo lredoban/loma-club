@@ -16,18 +16,18 @@
         <p>
           Bienvenue dans l’armée pacifique !
         </p>
+        <h2 class="!mt-20 text-center">Qui est Josépha ?</h2>
         <div class="lg:grid lg:gap-x-12 lg:grid-rows-1 lg:grid-cols-5 lg:grid-flow-row-dense">
-          <div class="relative aspect-w-16 aspect-h-9 lg:row-start-1 lg:col-start-1 lg:col-span-2 lg:-translate-x-32">
+          <div class="relative aspect-w-16 aspect-h-9 md:aspect-h-6 lg:row-start-1 lg:col-start-1 lg:col-span-2">
             <img class="absolute !m-0 inset-0 object-cover object-top rounded-lg" src="/img/JosephaRaphard.jpg" alt="Josépha Raphard créatrice du Loma club" width="1310" height="873" />
           </div>
-          <div class="lg:row-start-1 lg:col-start-2 lg:col-span-4">
-            <h2>Qui est Josépha ?</h2>
+          <div class="lg:row-start-1 lg:col-start-3 lg:col-span-3">
             <p>J’ai 27 ans et je suis la maman de Paloma née en Janvier 2020.</p>
             <p>Après avoir été attachée de presse puis avoir réalisé deux séries documentaires MEUFS et MERES, disponibles sur YouTube, j’ai créé le Loma Club.</p>
             <p>Je suis également autrice, j’écris principalement autour de la femme, de nos corps et de la maternité.</p>
           </div>
         </div>
-        <h2>Meufs & Méres</h2>
+        <h2 class="!mt-24 text-center">Meufs & Méres</h2>
         <p class="!mb-1">Onze femmes de 25 à 33 ans nous racontent leur vision "d'être une femme en 2018".</p>
         <div class="mx-auto aspect-w-16 aspect-h-9 bg-pink-500">
           <iframe src="https://www.youtube-nocookie.com/embed/6cyUCrBavpw?start=174s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

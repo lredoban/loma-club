@@ -23,7 +23,7 @@
 import { onMounted, ref, unref } from 'vue'
 import { useRouter } from 'vue-router'
 import useUser from '../user'
-import * as dayjs from 'dayjs'
+import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import dayOfYear from 'dayjs/plugin/dayOfYear'
 // import sessionsJson from './sessions.json'

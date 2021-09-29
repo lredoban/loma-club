@@ -20,7 +20,7 @@ export default {
     const { date, session, today } = props
     const ticketsLeft = computed(() => session.tickets_total - session.tickets_sold )
     const hasTickets = computed(() => ticketsLeft.value > 0 )
-    const displayBookingInfos = today.isBefore(date) || today.isSame(date) && today.hour() < +(session.start_time.replace(':00', ''))
+    const displayBookingInfos = today.isBefore(date) || today.isSame(date) && today.hour() < +(session.start_time.split(':')[0])
 
     return {
       displayBookingInfos,
