@@ -35,7 +35,7 @@
 const people = [
   {
     name: 'Flora',
-    kids: 'Mama de Lila 4 ans et Elio 1 an',
+    kids: 'Mama de Lila 4 ans & Elio 1 an',
     membership: 'Membre depuis Novembre 2020',
     imageUrl: '/img/mamas/Flora.png',
     quote:
@@ -47,7 +47,7 @@ const people = [
     membership: 'Membre depuis Octobre 2020',
     imageUrl: '/img/mamas/Julie.jpg',
     quote:
-      'On vient au Loma Club pour apprendre des autres mais aussi vider son sac, vider ses peurs, j’y ai pleuré et je me suis sentie soutenue. C’est un rendez vous que je ne rate pour rien au monde. ',
+      'On vient au Loma Club pour apprendre des autres mais aussi vider son sac, vider ses peurs. J’y ai pleuré et je me suis sentie soutenue, c’est un rendez vous que je ne rate pour rien au monde. ',
   },
   {
     name: 'Syra',

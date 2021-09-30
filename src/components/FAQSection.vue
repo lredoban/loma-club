@@ -38,8 +38,8 @@ const faqs = [
       answer: 'Les sessions du Loma Club durent une heure et comportent 3 ou 4 participantes en plus de Josépha qui anime la session.<br>Chaque participante commence par se présenter puis Josépha posent les premières questions habituelles qui permettent de lancer la session.<br>Après chaque session vous recevez un message groupé sur Instagram avec toutes les participantes de la session afin de pouvoir garder contact.'
   },
   {
-      question: 'Comment s’inscrit-on ?',
-      answer: 'Pour s’inscrire à une session du Loma Club il faut d’abord être membre.<br>Après avoir rempli le formulaire d’inscription vous recevez vos identifiants de membre sous 24h à 48h (le délai peut être un peu long les week-ends) <br>Vos identifiants vous permettent d’accéder librement au planning des sessions et vous pouvez ensuite sélectionner la ou les session(s) de votre choix.'
+      question: 'Comment s’inscrit-on à une session ?',
+      answer: 'Pour s’inscrire à une session du Loma Club il faut d’abord être membre.<br>Après avoir rempli le formulaire d’inscription vous recevez vos identifiants de membre sous 24h à 48h (le délai peut être un peu plus long les week-ends) <br>Vos identifiants vous permettent d’accéder librement au planning des sessions et vous pouvez ensuite sélectionner la ou les session(s) de votre choix.'
   },
   {
       question: 'Combien ça coûte ?',
@@ -48,13 +48,9 @@ const faqs = [
   {
     question: 'Les conditions d’adhésion au Loma Club',
     answer: 'Tous les profils de guerrières pacifiques sont les bienvenues au Loma Club.<br>Pour devenir membre il faut remplir le formulaire disponible sur le site et s’engager à respecter quelques règles comme la ponctualité lors des sessions, le respect des autres membres et une participation régulière aux sessions.'
-    },
-  {
-    question: 'Josépha fait-elle partie des sessions ?',
-    answer: 'Josépha anime chaque session du Loma Club. C’est également elle qui répond aux messages privé sur le compte Instagram ou aux mails sur l’adresse du Loma Club.'
   },
   {
-    question: 'Comment se décide les thèmes des sessions ?',
+    question: 'Comment se décident les thèmes des sessions ?',
     answer: 'Les thèmes des sessions sont pour la plupart récurrents, ils se sont décidés au cours de la première année du Loma Club durant laquelle Josépha demandait chaque mois aux membres les thèmes qu’elles souhaitaient aborder.<br>Il est également possible de demander un thème en envoyant un mail sur l’adresse du Loma Club.'
   },
   {
