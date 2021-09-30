@@ -47,7 +47,7 @@ const faqs = [
   },
   {
     question: 'Les conditions d’adhésion au Loma Club',
-    answer: 'Tous les profils de guerrières pacifiques sont les bienvenues au Loma Club.<br>Pour devenir membre il faut remplir le formulaire disponible sur le site et s’engager à respecter quelques règles comme la ponctualité lors des sessions, le respect des autres membres et une participation régulière aux sessions.'
+    answer: 'Tous les profils de guerrières pacifiques sont les bienvenues au Loma Club.<br>Pour devenir membre il faut remplir le formulaire disponible sur le site et s’engager à respecter quelques règles comme la ponctualité lors des sessions, le respect des autres membres et une participation régulière aux sessions.<br>Si tu as des questions tu peux écrire à cette adresse mail : <a class="underline" href="mailto:&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;">&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;</a>'
   },
   {
     question: 'Comment se décident les thèmes des sessions ?',
