@@ -123,13 +123,13 @@
       </div>
     </DisclosurePanel>
   </Disclosure>
-  <LoginButton :open="openLogin" @close="openLogin = false"/>
+  <LoginModal :open="openLogin" @close="openLogin = false"/>
 </template>
 
 <script setup>
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
-import LoginButton from './LoginButton.vue'
+import LoginModal from './LoginModal.vue'
 import { ref } from 'vue'
 import useUser from '../user'
 

@@ -42,7 +42,7 @@ export default {
 
     const updatePwd = async () => {
       loading.value = true
-      const { user, error } = await updatePassword(password.value)
+      const { _, error } = await updatePassword(password.value)
       if (!!error) $toast.error(error?.message)
       else $toast.success('Votre mot de passe a été mis à jour')
       loading.value = false
