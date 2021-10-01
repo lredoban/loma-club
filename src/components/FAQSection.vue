@@ -35,7 +35,7 @@ import { ChevronDownIcon } from '@heroicons/vue/outline'
 const faqs = [
   {
       question: 'Comment se déroule une session ?',
-      answer: 'Les sessions du Loma Club durent une heure et comportent 3 ou 4 participantes en plus de Josépha qui anime la session.<br>Chaque participante commence par se présenter puis Josépha posent les premières questions habituelles qui permettent de lancer la session.<br>Après chaque session vous recevez un message groupé sur Instagram avec toutes les participantes de la session afin de pouvoir garder contact.'
+      answer: 'Les sessions du Loma Club durent une heure et comportent 3 ou 4 participantes en plus de Josépha qui anime la session.<br>Chaque participante commence par se présenter puis Josépha pose les premières questions habituelles qui permettent de lancer la session.<br>Après chaque session vous recevez un message groupé sur Instagram avec toutes les participantes de la session afin de pouvoir garder contact.'
   },
   {
       question: 'Comment s’inscrit-on à une session ?',
