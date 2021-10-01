@@ -47,11 +47,11 @@ const faqs = [
   },
   {
     question: 'Les conditions d’adhésion au Loma Club',
-    answer: 'Tous les profils de guerrières pacifiques sont les bienvenues au Loma Club.<br>Pour devenir membre il faut remplir le formulaire disponible sur le site et s’engager à respecter quelques règles comme la ponctualité lors des sessions, le respect des autres membres et une participation régulière aux sessions.<br>Si tu as des questions tu peux écrire à cette adresse mail : <a class="underline" href="mailto:&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;">&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;</a>'
+    answer: 'Tous les profils de guerrières pacifiques sont les bienvenus au Loma Club et ce peu importe l\'âge de vos enfants.<br>Pour devenir membre il faut remplir le formulaire disponible sur le site et s’engager à respecter quelques règles comme la ponctualité lors des sessions ou le respect des autres membres du Loma Club.<br>Si tu as des questions tu peux écrire à cette adresse mail : <a class="underline" href="mailto:&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;">&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;</a>'
   },
   {
     question: 'Comment se décident les thèmes des sessions ?',
-    answer: 'Les thèmes des sessions sont pour la plupart récurrents, ils se sont décidés au cours de la première année du Loma Club durant laquelle Josépha demandait chaque mois aux membres les thèmes qu’elles souhaitaient aborder.<br>Il est également possible de demander un thème en envoyant un mail sur l’adresse du Loma Club.'
+    answer: 'Les thèmes des sessions sont pour la plupart récurrents, ils se sont décidés au cours de la première année du Loma Club durant laquelle Josépha demandait chaque mois aux membres les thèmes qu’elles souhaitaient aborder.<br>Il est également possible de demander un thème en envoyant un mail sur l’adresse du Loma Club : <a class="underline" href="mailto:&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;">&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;</a>'
   },
   {
     question: 'Peut-on faire des sessions avec les mêmes participantes ?',
