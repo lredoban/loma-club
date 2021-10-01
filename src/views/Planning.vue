@@ -87,7 +87,7 @@ export default {
       fetch('/.netlify/functions/fetch-sessions').then(res => {
         if (res.ok) {
           res.json().then(data => {
-            sessions.value = data.sessions.filter(e => e.status === 'Live')
+            sessions.value = data.sessions.filter(e => e.status === 'Live' || e.status === 'SoldOut')
             seedSessions(sessions.value)
           })
         }
