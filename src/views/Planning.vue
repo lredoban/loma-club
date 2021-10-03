@@ -4,7 +4,7 @@
       Le planning
     </h1>
     <p>
-      Le planning montre les 2 prochaines semaines. Il se met à jour tous les lundi ;)
+      Le planning affiche seulement les deux prochaines semaines. Il sera mis à jour tous les dimanches.
     </p>
     <div v-if="sessions.length === 0" class="h-screen w-full flex items-center justify-center -mt-16 -mb-48">
       <span class="animate-bounce -mt-24 text-4xl">
