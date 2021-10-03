@@ -73,7 +73,6 @@ export default {
     const seedSessions = sessions => {
       sessions.forEach(session => {
         const sessionDay = dayjs(session.start_date).dayOfYear()
-        console.warn(dayjs(session.start_date), sessionDay)
         const dateObj = weeks.value.reduce((found, days) => found || days.find(day => day.dayOfYear === sessionDay), null)
         if (!!dateObj) dateObj.sessions.push(session)
       })
@@ -85,7 +84,7 @@ export default {
       fetch('/.netlify/functions/fetch-sessions').then(res => {
         if (res.ok) {
           res.json().then(data => {
-            sessions.value = data.sessions.filter(e => e.status === 'Live' || e.status === 'SoldOut')
+            sessions.value = data.sessions
             seedSessions(sessions.value)
           })
         }
