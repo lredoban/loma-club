@@ -74,21 +74,22 @@ export default {
       sessions.forEach(session => {
         const sessionDay = dayjs(session.start_date).dayOfYear()
         const dateObj = weeks.value.reduce((found, days) => found || days.find(day => day.dayOfYear === sessionDay), null)
-        if (!!dateObj) dateObj.sessions = [...dateObj.sessions, session].sort((s1, s2) => s1.start_time > s2.start_time ? 1 : -1)
+        if (!!dateObj) dateObj.sessions.push(session)
       })
     }
 
     onMounted(() => {
       // sessions.value = sessionsJson
       // seedSessions(sessions.value)
-      fetch('/.netlify/functions/fetch-sessions').then(res => {
-        if (res.ok) {
-          res.json().then(data => {
-            sessions.value = data.sessions
-            seedSessions(sessions.value)
-          })
-        }
-      })
+      fetch('/.netlify/functions/fetch-sessions')
+        .then(res => {
+          if (res.ok) {
+            res.json().then(data => {
+              sessions.value = data.sessions
+              seedSessions(sessions.value)
+            })
+          }
+        })
     })
 
     return {
