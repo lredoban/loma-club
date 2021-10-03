@@ -5,7 +5,7 @@ const apiKey = process.env.EVENTZILLA_API_KEY
 
 const handler = async function () {
   try {
-    const { events_live: sessions } = await $fetch('https://www.eventzillaapi.net/api/v2/events?offset=0&limit=100&status=live', {
+    const { events: sessions } = await $fetch('https://www.eventzillaapi.net/api/v2/events?offset=0&limit=100', {
       headers: { Accept: 'application/json', 'x-api-key': apiKey }
     })
     

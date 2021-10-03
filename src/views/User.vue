@@ -1,5 +1,5 @@
 <template>
-  <main class="max-w-2xl mx-auto my-24">
+  <main class="max-w-2xl mx-auto my-24 px-4">
     <h1>Hello {{ user.email }}</h1>
     <form ref="form" action="#" method="POST" class="mt-12 space-y-6" @submit.prevent="updatePwd">
       <div class="space-y-1">
