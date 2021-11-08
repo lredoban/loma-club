@@ -18,7 +18,7 @@ export default {
   },
   setup(props) {
     const { date, session, today } = props
-    const ticketsLeft = computed(() => session.tickets_total - session.tickets_sold )
+    const ticketsLeft = computed(() => 5 - session.availability )
     const hasTickets = computed(() => ticketsLeft.value > 0 )
     const displayBookingInfos = today.isBefore(date) || today.isSame(date) && today.hour() < +(session.start_time.split(':')[0])
 
@@ -34,8 +34,8 @@ export default {
 
 <template>
   <div>
-    <h3 class="font-semibold text-ocre tracking-wide">{{ session.title }}</h3>
-    <p class="font-semibold text-beige">{{ session.start_time }}</p>
+    <h3 class="font-semibold text-ocre tracking-wide">{{ session.topic }}</h3>
+    <p class="font-semibold text-beige">{{ session.startTime }}</p>
     <template v-if="displayBookingInfos">
       <div class="text-sm">
         <p v-if="hasTickets">Places restantes: {{ ticketsLeft }}</p>

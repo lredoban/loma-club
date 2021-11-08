@@ -1,24 +1,25 @@
 require('dotenv').config()
 const { $fetch } = require('ohmyfetch')
+const dayjs = require('dayjs')
+const customParseFormat = require('dayjs/plugin/customParseFormat')
+dayjs.extend(customParseFormat)
 
-const apiKey = process.env.EVENTZILLA_API_KEY
+const tixomUrl = process.env.TIXOOM_URL
 
 const handler = async function () {
   try {
-    const sessionsObj = {}
-    const { events_live } = await $fetch('https://www.eventzillaapi.net/api/v2/events?offset=0&limit=100&status=live', {
-      headers: { Accept: 'application/json', 'x-api-key': apiKey }
-    })
-    events_live.forEach(event => {
-      sessionsObj[event.id] = event
-    })
-    const { events } = await $fetch('https://www.eventzillaapi.net/api/v2/events?offset=0&limit=100', {
-      headers: { Accept: 'application/json', 'x-api-key': apiKey }
-    })
-    events.forEach(event => {
-        if (!sessionsObj[event.id]) sessionsObj[event.id] = event
+    const { results: events } = await $fetch(tixomUrl)
+
+    const sessions = events
+      .map(event => {
+        const showtime = dayjs(event.showtime.slice(5, 26), 'MMM DD, YYYY hh:mm A')
+        return {
+          ...event,
+          showtime,
+          startTime: showtime.format('HH:mm')
+        }
       })
-    const sessions = Object.values(sessionsObj).sort((s1, s2) => s1.start_time > s2.start_time ? 1 : -1)
+      .sort((s1, s2) => s1.showtime.unix() > s2.showtime.unix() ? 1 : -1)
 
     return {
       statusCode: 200,

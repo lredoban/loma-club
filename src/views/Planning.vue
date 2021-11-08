@@ -29,8 +29,6 @@
 
 <script>
 import { onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import useUser from '../user'
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import dayOfYear from 'dayjs/plugin/dayOfYear'
@@ -56,7 +54,6 @@ export default {
     const weeks = ref([])
     const sessions = ref([])
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-    const router = useRouter()
 
     const now = dayjs().locale('fr')
     const seedWeek = offset => daysList.map((day, i) => {
@@ -72,7 +69,7 @@ export default {
 
     const seedSessions = sessions => {
       sessions.forEach(session => {
-        const sessionDay = dayjs(session.start_date).dayOfYear()
+        const sessionDay = dayjs(session.showtime).dayOfYear()
         const dateObj = weeks.value.reduce((found, days) => found || days.find(day => day.dayOfYear === sessionDay), null)
         if (!!dateObj) dateObj.sessions.push(session)
       })
