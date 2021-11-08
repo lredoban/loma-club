@@ -4,11 +4,8 @@
       <div class="mx-auto max-w-7xl w-full pt-16 pb-10 text-center lg:py-36 lg:text-left xl:py-72">
         <div class="px-4 lg:w-1/2 sm:px-8 xl:pr-16">
           <h1 class="text-2xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-4xl lg:text-3xl xl:text-4xl">
-            <span class="block xl:inline">Aussi appelé armée pacifique, <span>le <span class="text-ocre">Loma Club</span>,</span> est un club de parole privé autour de la maternité.</span>
+            <span class="block xl:inline">{{ lomaLine[0] }}<span class="text-ocre">Loma Club</span>{{ lomaLine[1] }}</span>
           </h1>
-          <!-- <p class="mt-3 max-w-md mx-auto text-lg text-gray-800 sm:text-xl md:mt-5 md:max-w-3xl">
-            Les sessions durent une heure et s’articulent autour de thèmes tels que le post-partum, la reprise du travail, être mère quand on a des relations difficiles avec la sienne, la sexualité, avoir envie de changer de voie professionnelle, etc.
-          </p> -->
         </div>
       </div>
       <div class="relative w-full p-6 grid grid-cols-3 grid-rows-3 sm:h-72 md:h-[48rem] lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2 lg:h-full">
@@ -26,10 +23,15 @@
 
 <script setup lang="ts">
 import { useParallax } from '@vueuse/core'
-import { computed, reactive, ref } from 'vue'
+import { computed, defineProps, reactive, ref, toRef } from 'vue'
 import {
   map,
 } from "https://cdn.skypack.dev/@georgedoescode/generative-utils@1.0.0"
+
+const props = defineProps({ story: Object })
+const story = toRef(props, 'story')
+
+const lomaLine = computed(() => story.value?.headline.split('Loma Club')) 
 
 const target = ref(null)
 const parallax = reactive(useParallax(target))

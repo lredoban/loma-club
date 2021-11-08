@@ -7,11 +7,11 @@
           Foire Aux Questions
         </h2>
         <dl class="mt-6 space-y-6 divide-y divide-gray-200">
-          <Disclosure as="div" v-for="faq in faqs" :key="faq.question" class="pt-6" v-slot="{ open }">
+          <Disclosure as="div" v-for="{ question, reponse } in cleanedQuestions" :key="question" class="pt-6" v-slot="{ open }">
             <dt class="text-lg">
               <DisclosureButton class="text-left w-full flex justify-between items-start text-gray-400">
                 <span class="font-medium text-gray-900">
-                  {{ faq.question }}
+                  {{ question }}
                 </span>
                 <span class="ml-6 h-7 flex items-center">
                   <ChevronDownIcon :class="[open ? '-rotate-180' : 'rotate-0', 'h-6 w-6 transform']" aria-hidden="true" />
@@ -19,7 +19,7 @@
               </DisclosureButton>
             </dt>
             <DisclosurePanel as="dd" class="mt-2 pr-12">
-              <p class="text-base text-gray-700" v-html="faq.answer"></p>
+              <p class="text-base text-gray-700" v-html="reponse"></p>
             </DisclosurePanel>
           </Disclosure>
         </dl>
@@ -31,33 +31,7 @@
 <script>
 import { Disclosure, DisclosureButton, DisclosurePanel } from '@headlessui/vue'
 import { ChevronDownIcon } from '@heroicons/vue/outline'
-
-const faqs = [
-  {
-      question: 'Comment se déroule une session ?',
-      answer: 'Les sessions du Loma Club durent une heure et comportent 3 ou 4 participantes en plus de Josépha qui anime la session.<br>Chaque participante commence par se présenter puis Josépha pose les premières questions habituelles qui permettent de lancer la session.<br>Après chaque session vous recevez un message groupé sur Instagram avec toutes les participantes de la session afin de pouvoir garder contact.'
-  },
-  {
-      question: 'Comment s’inscrit-on à une session ?',
-      answer: 'Pour s’inscrire à une session du Loma Club il faut d’abord être membre.<br>Après avoir rempli le formulaire d’inscription vous recevez vos identifiants de membre sous 24h à 48h (le délai peut être un peu plus long les week-ends) <br>Vos identifiants vous permettent d’accéder librement au planning des sessions et vous pouvez ensuite sélectionner la ou les session(s) de votre choix.'
-  },
-  {
-      question: 'Combien ça coûte ?',
-      answer: 'Chaque session du Loma Club est au prix de 23€.<br>Vous avez la possibilité d\'être remboursées si vous annulez votre participation sous plus de 24h.'
-  },
-  {
-    question: 'Les conditions d’adhésion au Loma Club',
-    answer: 'Tous les profils de guerrières pacifiques sont les bienvenus au Loma Club et ce peu importe l\'âge de vos enfants.<br>Pour devenir membre il faut remplir le formulaire disponible sur le site et s’engager à respecter quelques règles comme la ponctualité lors des sessions ou le respect des autres membres du Loma Club.<br>Si tu as des questions tu peux écrire à cette adresse mail : <a class="underline" href="mailto:&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;">&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;</a>'
-  },
-  {
-    question: 'Comment se décident les thèmes des sessions ?',
-    answer: 'Les thèmes des sessions sont pour la plupart récurrents, ils se sont décidés au cours de la première année du Loma Club durant laquelle Josépha demandait chaque mois aux membres les thèmes qu’elles souhaitaient aborder.<br>Il est également possible de demander un thème en envoyant un mail sur l’adresse du Loma Club : <a class="underline" href="mailto:&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;">&#104;e&#108;&#108;o@&#108;omac&#108;&#117;b.&#101;&#117;</a>'
-  },
-  {
-    question: 'Peut-on faire des sessions avec les mêmes participantes ?',
-    answer: 'Certaines guerrières pacifiques aiment se retrouver lors de sessions récurrentes. Pour ça, il est préférable de vous organiser entre vous et de réserver la même session. Grâce au compte Instagram du Loma Club vous avez tous les contacts des autres guerrières pacifiques.'
-  }
-]
+import { resolver } from '../storyblok'
 
 export default {
   components: {
@@ -66,10 +40,16 @@ export default {
     DisclosurePanel,
     ChevronDownIcon,
   },
-  setup() {
-    return {
-      faqs,
+  props: {
+    questions: {
+      type: Array,
+      required: true
     }
   },
+  computed: {
+    cleanedQuestions() {
+      return this.questions.map(q => ({ ...q, reponse: resolver.render(q.reponse ) }))
+    }
+  }
 }
 </script>
