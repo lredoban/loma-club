@@ -1,10 +1,46 @@
 require('dotenv').config()
 const { $fetch } = require('ohmyfetch')
+const dayjs = require('dayjs')
+const customParseFormat = require('dayjs/plugin/customParseFormat')
+dayjs.extend(customParseFormat)
 
+const tixoomUrl = process.env.TIXOOM_URL
 const apiKey = process.env.EVENTZILLA_API_KEY
 
 const handler = async function () {
   try {
+    const sessionsZilla = await fetchEventzilla()
+    
+    const { results: events } = await $fetch(tixoomUrl)
+
+    const sessions = events
+      .map(event => {
+        const showtime = dayjs(event.showtime.slice(5, 26), 'MMM DD, YYYY hh:mm A')
+        return {
+          ...event,
+          showtime,
+          startTime: showtime.format('HH:mm')
+        }
+      })
+      .sort((s1, s2) => s1.showtime.unix() > s2.showtime.unix() ? 1 : -1)
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ sessions: [...sessions, ...sessionsZilla] })
+    }
+  } catch (error) {
+    // output to netlify function log
+    console.log(error)
+    return {
+      statusCode: 500,
+      // Could be a custom message or object i.e. JSON.stringify(err)
+      body: JSON.stringify({ msg: error.message }),
+    }
+  }
+}
+
+const fetchEventzilla = () => {
+  return new Promise(async (resolve) => {
     const sessionsObj = {}
     const { events_live } = await $fetch('https://www.eventzillaapi.net/api/v2/events?offset=0&limit=100&status=live', {
       headers: { Accept: 'application/json', 'x-api-key': apiKey }
@@ -18,21 +54,18 @@ const handler = async function () {
     events.forEach(event => {
         if (!sessionsObj[event.id]) sessionsObj[event.id] = event
       })
-    const sessions = Object.values(sessionsObj).sort((s1, s2) => s1.start_time > s2.start_time ? 1 : -1)
+    resolve(Object.values(sessionsObj)
+      .sort((s1, s2) => s1.start_time > s2.start_time ? 1 : -1)
+      .map(s => ({
+        ...s,
+        topic: s.title,
+        showtime: s.start_date,
+        startTime: s.start_time,
+        availability: s.tickets_sold + 1
+      }))
+    )
+  })
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ sessions })
-    }
-  } catch (error) {
-    // output to netlify function log
-    console.log(error)
-    return {
-      statusCode: 500,
-      // Could be a custom message or object i.e. JSON.stringify(err)
-      body: JSON.stringify({ msg: error.message }),
-    }
-  }
 }
 
 module.exports = { handler }
