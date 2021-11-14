@@ -37,6 +37,9 @@ export default () => {
     resetPassword: email => supabase.auth.api.resetPasswordForEmail(email),
     updatePassword: password => supabase.auth.update({
       password
-    })
+    }),
+    addToWaitlist: event_id => {
+      return supabase.from('Waitinglist').insert({ event_id, email: user.value.email, sent: false }, { upsert: true })
+    }
   }
 }

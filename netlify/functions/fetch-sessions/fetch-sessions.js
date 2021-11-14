@@ -18,6 +18,8 @@ const handler = async function () {
         const showtime = dayjs(event.showtime.slice(5, 26), 'MMM DD, YYYY hh:mm A')
         return {
           ...event,
+          id: event.tag,
+          provider: 'tixoom',
           showtime,
           startTime: showtime.format('HH:mm')
         }
@@ -58,10 +60,11 @@ const fetchEventzilla = () => {
       .sort((s1, s2) => s1.start_time > s2.start_time ? 1 : -1)
       .map(s => ({
         ...s,
-        topic: s.title,
+        availability: s.tickets_sold + 1,
+        provider: 'eventzilla',
         showtime: s.start_date,
         startTime: s.start_time,
-        availability: s.tickets_sold + 1
+        topic: s.title
       }))
     )
   })
