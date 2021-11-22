@@ -15,7 +15,7 @@ const handler = async function () {
 
     const sessions = events
       .map(event => {
-        const showtime = dayjs(event.showtime.slice(5, 26), 'MMM DD, YYYY hh:mm A')
+        const showtime = dayjs(event.showtime.slice(5, -4), 'MMM D, YYYY hh:mm A')
         return {
           ...event,
           id: event.tag,
