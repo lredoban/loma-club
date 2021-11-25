@@ -20,9 +20,9 @@ const navigation = {
   main: [
     { name: '@josepha_raphard', href: 'https://www.instagram.com/josepha_raphard/?hl=fr' },
     { name: "S'inscrire", href: import.meta.env.VITE_FORM_URL },
-    { name: 'Mentions légales & CGV', href: '#' },
-    { name: 'Témoignages', href: '#' },
-    { name: 'Média', href: '#' },
+    // { name: 'Mentions légales & CGV', href: '#' },
+    // { name: 'Témoignages', href: '#' },
+    // { name: 'Média', href: '#' },
     { name: 'by Lova', href: 'https://lovasoa.fr' },
   ]
 }
