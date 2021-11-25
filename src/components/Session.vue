@@ -44,7 +44,7 @@ export default {
         <p v-else>Plus de place disponible</p>
       </div>
       <div class="mt-4 ">
-        <a v-if="hasTickets || session.provider === 'eventzilla'" :href="session.url" target="_blank" reel="noopener" class="relative inline-block py-0 px-5 rounded-full bg-ocre text-white tracking-wide uppercase hover:ring-2 hover:ring-offset-2 hover:ring-ocre">
+        <a v-if="hasTickets" :href="session.url" target="_blank" reel="noopener" class="relative inline-block py-0 px-5 rounded-full bg-ocre text-white tracking-wide uppercase hover:ring-2 hover:ring-offset-2 hover:ring-ocre">
           <span>
             {{
               hasTickets ?
