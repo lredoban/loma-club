@@ -3,8 +3,11 @@
     <h1 class="text-5xl text-center absolute opacity-0">
       Le planning
     </h1>
-    <p>
+    <p v-if="isAuth">
       Le planning affiche seulement les deux prochaines semaines. Il sera mis à jour tous les dimanches.
+    </p>
+    <p v-else>
+      Veuillez vous connecter afin de pouvoir réserver une session.
     </p>
     <div v-if="sessions.length === 0" class="h-screen w-full flex items-center justify-center -mt-16 -mb-48">
       <span class="animate-bounce -mt-24 text-4xl">
@@ -32,6 +35,7 @@ import { onMounted, ref } from 'vue'
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import dayOfYear from 'dayjs/plugin/dayOfYear'
+import useUser from '../user'
 // import sessionsJson from './sessions.json'
 
 import Session from '../components/Session.vue'
@@ -54,6 +58,7 @@ export default {
     const weeks = ref([])
     const sessions = ref([])
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+    const { isAuth } = useUser()
 
     const now = dayjs().locale('fr')
     const seedWeek = offset => daysList.map((day, i) => {
@@ -91,6 +96,7 @@ export default {
 
     return {
       dateOptions,
+      isAuth,
       sessions,
       today: now,
       weeks

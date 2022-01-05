@@ -1,6 +1,7 @@
 <script>
 import { computed } from 'vue'
 import WaitingListButton from './WaitingListButton.vue'
+import useUser from '../user'
 
 export default {
   props: {
@@ -20,6 +21,7 @@ export default {
   components: { WaitingListButton },
   setup(props) {
     const { date, session, today } = props
+    const { isAuth } = useUser()
     const ticketsLeft = computed(() => 5 - session.availability )
     const hasTickets = computed(() => ticketsLeft.value > 0 )
     const displayBookingInfos = today.isBefore(date) || today.isSame(date) && today.hour() < +(session.startTime.split(':')[0])
@@ -27,6 +29,7 @@ export default {
     return {
       displayBookingInfos,
       hasTickets,
+      isAuth,
       session,
       ticketsLeft
     }
@@ -43,7 +46,7 @@ export default {
         <p v-if="hasTickets">Places restantes: {{ ticketsLeft }}</p>
         <p v-else>Plus de place disponible</p>
       </div>
-      <div class="mt-4 ">
+      <div v-if="isAuth" class="mt-4">
         <a v-if="hasTickets" :href="session.url" target="_blank" reel="noopener" class="relative inline-block py-0 px-5 rounded-full bg-ocre text-white tracking-wide uppercase hover:ring-2 hover:ring-offset-2 hover:ring-ocre">
           <span>
             {{

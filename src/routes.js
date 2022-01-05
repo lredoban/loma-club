@@ -14,6 +14,5 @@ export let routes = [
 ]
 
 export const authRoutes = [
-  'planning',
   'profil'
 ]
