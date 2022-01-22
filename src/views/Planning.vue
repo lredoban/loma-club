@@ -3,6 +3,7 @@
     <h1 class="text-5xl text-center absolute opacity-0">
       Le planning
     </h1>
+    <p class="text-ocre font-semibold tracking-wide">Le Loma Club sera fermé du 30 janvier au 10 février. Les sessions reprendront le 11 février</p>
     <p v-if="!isAuth">
       Veuillez vous connecter afin de pouvoir réserver une session.
     </p>
