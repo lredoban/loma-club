@@ -48,7 +48,8 @@ const daysList = [
   'mardi',
   'mercredi',
   'jeudi',
-  'vendredi'
+  'vendredi',
+  'samedi'
 ]
 
 export default {
@@ -72,7 +73,6 @@ export default {
     weeks.value.push(seedWeek(8))
 
 
-
     const seedSessions = sessions => {
       sessions.forEach(session => {
         const sessionDay = dayjs(session.showtime).dayOfYear()
@@ -90,6 +90,9 @@ export default {
             res.json().then(data => {
               sessions.value = data.sessions
               seedSessions(sessions.value)
+              // remove samedi if no session occurs that day
+              if (weeks.value[0][5].sessions.length === 0) weeks.value[0].pop()
+              if (weeks.value[1][5].sessions.length === 0) weeks.value[1].pop()
             })
           }
         })
