@@ -36,24 +36,6 @@
                     >{{ link.text }}</a
                   >
                 </router-link>
-                <router-link
-                  v-if="isAuth"
-                  to="/planning"
-                  custom
-                  v-slot="{ navigate, href, isExactActive }"
-                >
-                  <a
-                    :href="href"
-                    @click="navigate"
-                    class="inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium"
-                    :class="[
-                      isExactActive
-                        ? 'border-ocre text-ocre'
-                        : 'border-transparent text-gray-700 hover:border-gray-300 hover:text-gray-700'
-                    ]"
-                    >Planning</a
-                  >
-                </router-link>
           </div>
         </div>
         <div class="flex items-center space-x-4">
@@ -136,7 +118,8 @@ import useUser from '../user'
 const { isAuth } = useUser()
 const links = [
   { text: 'Accueil', to: '/' },
-  { text: 'À propos', to: '/a-propos' }
+  { text: 'À propos', to: '/a-propos' },
+  { text: 'Planning', to: '/planning' }
 ]
 const formUrl = import.meta.env.VITE_FORM_URL
 

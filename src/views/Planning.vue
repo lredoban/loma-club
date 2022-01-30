@@ -3,6 +3,10 @@
     <h1 class="text-5xl text-center absolute opacity-0">
       Le planning
     </h1>
+    <p class="text-ocre font-semibold tracking-wide">Le Loma Club sera fermé du 30 janvier au 10 février. Les sessions reprendront le 11 février</p>
+    <p v-if="!isAuth">
+      Veuillez vous connecter afin de pouvoir réserver une session.
+    </p>
     <p>
       Le planning affiche seulement les deux prochaines semaines. Il sera mis à jour tous les dimanches.
     </p>
@@ -29,11 +33,10 @@
 
 <script>
 import { onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import useUser from '../user'
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import dayOfYear from 'dayjs/plugin/dayOfYear'
+import useUser from '../user'
 // import sessionsJson from './sessions.json'
 
 import Session from '../components/Session.vue'
@@ -45,7 +48,8 @@ const daysList = [
   'mardi',
   'mercredi',
   'jeudi',
-  'vendredi'
+  'vendredi',
+  'samedi'
 ]
 
 export default {
@@ -56,7 +60,7 @@ export default {
     const weeks = ref([])
     const sessions = ref([])
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-    const router = useRouter()
+    const { isAuth } = useUser()
 
     const now = dayjs().locale('fr')
     const seedWeek = offset => daysList.map((day, i) => {
@@ -69,10 +73,9 @@ export default {
     weeks.value.push(seedWeek(8))
 
 
-
     const seedSessions = sessions => {
       sessions.forEach(session => {
-        const sessionDay = dayjs(session.start_date).dayOfYear()
+        const sessionDay = dayjs(session.showtime).dayOfYear()
         const dateObj = weeks.value.reduce((found, days) => found || days.find(day => day.dayOfYear === sessionDay), null)
         if (!!dateObj) dateObj.sessions.push(session)
       })
@@ -87,6 +90,9 @@ export default {
             res.json().then(data => {
               sessions.value = data.sessions
               seedSessions(sessions.value)
+              // remove samedi if no session occurs that day
+              if (weeks.value[0][5].sessions.length === 0) weeks.value[0].pop()
+              if (weeks.value[1][5].sessions.length === 0) weeks.value[1].pop()
             })
           }
         })
@@ -94,6 +100,7 @@ export default {
 
     return {
       dateOptions,
+      isAuth,
       sessions,
       today: now,
       weeks
