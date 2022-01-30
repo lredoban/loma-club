@@ -3,12 +3,9 @@
     <h1 class="text-5xl text-center absolute opacity-0">
       Le planning
     </h1>
-    <p class="text-ocre font-semibold tracking-wide">Le Loma Club sera fermé du 30 janvier au 10 février. Les sessions reprendront le 11 février</p>
+    <div v-html="html"></div>
     <p v-if="!isAuth">
-      Veuillez vous connecter afin de pouvoir réserver une session.
-    </p>
-    <p>
-      Le planning affiche seulement les deux prochaines semaines. Il sera mis à jour tous les dimanches.
+      {{ story.connect }}
     </p>
     <div v-if="sessions.length === 0" class="h-screen w-full flex items-center justify-center -mt-16 -mb-48">
       <span class="animate-bounce -mt-24 text-4xl">
@@ -32,11 +29,12 @@
 </template>
 
 <script>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref, unref } from 'vue'
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import dayOfYear from 'dayjs/plugin/dayOfYear'
 import useUser from '../user'
+import useStoryblok from '../storyblok'
 // import sessionsJson from './sessions.json'
 
 import Session from '../components/Session.vue'
@@ -61,6 +59,8 @@ export default {
     const sessions = ref([])
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
     const { isAuth } = useUser()
+    const { story, resolver } = useStoryblok('planning')
+    const html = computed(() => resolver.render(story.value?.body))
 
     const now = dayjs().locale('fr')
     const seedWeek = offset => daysList.map((day, i) => {
@@ -99,6 +99,8 @@ export default {
     })
 
     return {
+      html,
+      story,
       dateOptions,
       isAuth,
       sessions,

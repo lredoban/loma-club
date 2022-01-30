@@ -37,4 +37,10 @@
   html {
     @apply font-cooper-hewitt;
   }
+  b {
+    @apply text-ocre font-semibold tracking-wide
+  }
+  a {
+    @apply underline
+  }
 }

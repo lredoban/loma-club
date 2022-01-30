@@ -41,5 +41,5 @@ export default (slug, options = {}) => {
 
   getStory('published')
 
-  return { story, resolver: storyapi.richTextResolver }
+  return { story, resolver }
 }
