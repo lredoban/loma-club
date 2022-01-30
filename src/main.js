@@ -5,6 +5,7 @@ import { routes, authRoutes } from './routes.js'
 import { createRouter, createWebHistory } from 'vue-router'
 import Toaster from "@meforma/vue-toaster"
 import useUser from './user'
+import StoryblokVue from 'storyblok-vue'
 
 let app = createApp(App)
 let router = createRouter({
@@ -40,5 +41,5 @@ if (import.meta.hot) {
 
 app.use(router)
 app.use(Toaster)
-
+app.use(StoryblokVue)
 app.mount('#app')

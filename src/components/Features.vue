@@ -2,15 +2,15 @@
   <div class="py-12 bg-creme shadow">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
       <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
-        <div v-for="feature in features" :key="feature.name">
+        <div v-for="{ Titre, Texte, Icon } in features" :key="Titre">
           <dt>
             <div class="flex items-center justify-center h-14 w-14">
-              <img :src="feature.iconUrl" :alt="feature.name" />
+              <img :src="Icon.filename" :alt="Titre" />
             </div>
-            <p class="mt-5 text-ocre text-lg leading-6 font-semibold tracking-widest">{{ feature.name }}</p>
+            <p class="mt-5 text-ocre text-lg leading-6 font-semibold tracking-widest">{{ Titre }}</p>
           </dt>
           <dd class="mt-2 text-base text-gray-800">
-            {{ feature.description }}
+            {{ Texte }}
           </dd>
         </div>
       </dl>
@@ -41,11 +41,12 @@ const features = [
 ]
 
 export default {
-  setup() {
-    return {
-      features,
+  props: {
+    features: {
+      type: Array,
+      required: true
     }
-  },
+  }
 }
 </script>
 

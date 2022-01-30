@@ -1,12 +1,14 @@
 <template>
   <main>
-    <Hero/>
-    <CTASection/>
-    <Features/>
-    <TestimonialsSection/>
-    <MediasSections/>
-    <FAQSection id="faq"/>
-    <ExpiredModal :open="openExpiredModal" @close="openExpiredModal = false"/>
+    <template v-if="!!story">
+      <Hero :story="story"/>
+      <CTASection :story="story"/>
+      <Features :features="story.Features" />
+      <TestimonialsSection :temoignages="story.Temoignages"/>
+      <MediasSections :links="story.Links"/>
+      <FAQSection id="faq" :questions="story.FAQ"/>
+      <ExpiredModal :open="openExpiredModal" @close="openExpiredModal = false"/>
+    </template>
   </main>
 </template>
 
@@ -22,7 +24,7 @@ import ExpiredModal from '../components/ExpiredModal.vue'
 import { inject, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import useUser from '../user'
-
+import useStoryblok from '../storyblok'
 
 export default {
   components: {
@@ -40,6 +42,7 @@ export default {
     const { lastEvent, user } = useUser()
     const $toast = inject('$toast')
     const openExpiredModal = ref(false)
+    const { story } = useStoryblok('home', { resolve_relations: 'Homepage.Temoignages' })
 
     if (route.fullPath.includes('#error_code=404')) {
       openExpiredModal.value = true
@@ -49,6 +52,7 @@ export default {
       if (newValue === 'PASSWORD_RECOVERY') router.push('/profil?recovery=true')
     })
     return {
+      story,
       lastEvent,
       user,
       openExpiredModal
