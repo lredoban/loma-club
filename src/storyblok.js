@@ -25,18 +25,27 @@ export default (slug, options = {}) => {
   }
 
   onMounted(() => {
-    const { StoryblokBridge, location } = window
-    const storyblokInstance = new StoryblokBridge()
-    
-    storyblokInstance.on(['published', 'change'], () => {
-        getStory('draft')
-    })
-    storyblokInstance.on('input', (event) => {
-      story.value = event.story.content
-    })
-    storyblokInstance.on('enterEditmode', (event) => {
-      getStory('draft')
-    })
+    if (import.meta.env.DEV) {
+      const script = document.createElement('script')
+      script.src = '//app.storyblok.com/f/storyblok-v2-latest.js'
+      script.type = 'text/javascript'
+
+      script.onload = () => {
+        const { StoryblokBridge } = window
+        const storyblokInstance = new StoryblokBridge()
+        
+        storyblokInstance.on(['published', 'change'], () => {
+            getStory('draft')
+        })
+        storyblokInstance.on('input', (event) => {
+          story.value = event.story.content
+        })
+        storyblokInstance.on('enterEditmode', (event) => {
+          getStory('draft')
+        })
+      }
+      document.head.appendChild(script)
+    }
   })
 
   getStory('published')
