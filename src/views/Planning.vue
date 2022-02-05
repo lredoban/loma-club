@@ -75,6 +75,7 @@ export default {
 
     const seedSessions = sessions => {
       sessions.forEach(session => {
+        session.startTime = dayjs(session.showtime).format('HH:mm')
         const sessionDay = dayjs(session.showtime).dayOfYear()
         const dateObj = weeks.value.reduce((found, days) => found || days.find(day => day.dayOfYear === sessionDay), null)
         if (!!dateObj) dateObj.sessions.push(session)
