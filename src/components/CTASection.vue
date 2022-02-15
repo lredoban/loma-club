@@ -8,9 +8,9 @@
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
         <div class="inline-flex rounded-md shadow">
-          <a :href="formUrl" rel="noopener" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ocre hover:bg-ocre">
-            S'inscrire
-          </a>
+          <router-link to="/planning" rel="noopener" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-ocre hover:bg-ocre">
+            Le planning
+          </router-link>
         </div>
         <div class="ml-3 inline-flex rounded-md shadow">
           <a href="#faq" class="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-ocre bg-white hover:bg-ocre hover:bg-opacity-10">
@@ -24,10 +24,8 @@
 
 
 <script setup>
-import { computed, defineProps, toRef, watch } from 'vue'
+import { toRef } from 'vue'
 
 const props = defineProps({ story: Object })
 const story = toRef(props, 'story')
-
-const formUrl = import.meta.env.VITE_FORM_URL
 </script>

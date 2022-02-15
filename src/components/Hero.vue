@@ -23,7 +23,7 @@
 
 <script setup lang="ts">
 import { useParallax } from '@vueuse/core'
-import { computed, defineProps, reactive, ref, toRef } from 'vue'
+import { computed, reactive, ref, toRef } from 'vue'
 import {
   map,
 } from "https://cdn.skypack.dev/@georgedoescode/generative-utils@1.0.0"

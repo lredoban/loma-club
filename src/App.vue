@@ -5,7 +5,6 @@
       <router-view />
     </div>
     <TheFooter/>
-    <InviteModal :open="openInvite" @close="openInvite = false"/>
   </div>
 </template>
 
@@ -16,31 +15,13 @@
 
 <script>
 import { provide } from 'vue'
-import useUser from './user'
 import TheFooter from './components/TheFooter.vue'
 import TheHeader from './components/TheHeader.vue'
-import InviteModal from './components/InviteModal.vue'
-
-const { isAuth } = useUser()
 
 export default {
-  components: { InviteModal, TheFooter, TheHeader},
-  data: () => ({
-    openInvite: false
-  }),
+  components: { TheFooter, TheHeader},
   created() {
     provide('$toast', this.$toast)
-  },
-  watch: {
-    isAuth(newValue, oldValue) {
-      if (newValue && !oldValue && window.location.search.includes('invite'))
-        this.openInvite = true
-    }
-  },
-  computed: {
-    isAuth() {
-      return isAuth.value
-    }
   }
 }
 

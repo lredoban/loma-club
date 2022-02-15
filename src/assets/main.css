@@ -36,6 +36,7 @@
 @layer base {
   html {
     @apply font-cooper-hewitt;
+    scroll-behavior: smooth;
   }
   b {
     @apply text-ocre font-semibold tracking-wide

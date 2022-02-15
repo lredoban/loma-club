@@ -5,7 +5,6 @@ import useStoryblok from '../storyblok'
 const { story, resolver } = useStoryblok('a-propos')
 const histoire = computed(() => resolver.render(story.value?.histoire))
 const josepha = computed(() => resolver.render(story.value?.texteJosepha))
-
 </script>
 
 

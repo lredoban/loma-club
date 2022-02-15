@@ -4,9 +4,6 @@
       Le planning
     </h1>
     <div v-html="html"></div>
-    <p v-if="!isAuth">
-      {{ story.connect }}
-    </p>
     <div v-if="sessions.length === 0" class="h-screen w-full flex items-center justify-center -mt-16 -mb-48">
       <span class="animate-bounce -mt-24 text-4xl">
         Chargement
@@ -33,7 +30,6 @@ import { computed, onMounted, ref, unref } from 'vue'
 import dayjs from 'dayjs'
 import 'dayjs/locale/fr'
 import dayOfYear from 'dayjs/plugin/dayOfYear'
-import useUser from '../user'
 import useStoryblok from '../storyblok'
 // import sessionsJson from './sessions.json'
 
@@ -58,7 +54,6 @@ export default {
     const weeks = ref([])
     const sessions = ref([])
     const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
-    const { isAuth } = useUser()
     const { story, resolver } = useStoryblok('planning')
     const html = computed(() => resolver.render(story.value?.body))
 
@@ -103,7 +98,6 @@ export default {
       html,
       story,
       dateOptions,
-      isAuth,
       sessions,
       today: now,
       weeks

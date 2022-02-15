@@ -1,5 +1,4 @@
 <script setup>
-  import { defineProps } from 'vue'
   import { CheckIcon } from '@heroicons/vue/outline'
   import { Dialog, DialogOverlay, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
 
