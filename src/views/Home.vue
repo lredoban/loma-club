@@ -2,7 +2,6 @@
   <main>
     <template v-if="!!story">
       <Hero :story="story"/>
-      <CTASection :story="story"/>
       <Features :features="story.Features" />
       <TestimonialsSection :temoignages="story.Temoignages"/>
       <MediasSections :links="story.Links"/>
@@ -12,7 +11,6 @@
 </template>
 
 <script>
-import CTASection from '../components/CTASection.vue'
 import FAQSection from '../components/FAQSection.vue'
 import Features from '../components/Features.vue'
 import Hero from '../components/Hero.vue'
@@ -23,7 +21,6 @@ import useStoryblok from '../storyblok'
 
 export default {
   components: {
-    CTASection,
     FAQSection,
     Features,
     Hero,

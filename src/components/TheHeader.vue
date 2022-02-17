@@ -40,7 +40,7 @@
         </div>
         <div class="flex items-center space-x-4">
           <div class="flex-shrink-0">
-            <router-link to="/planning" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-ocre shadow-sm hover:bg-ocre hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ocre md:hidden">
+            <router-link to="/planning" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-ocre shadow-sm hover:bg-ocre hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ocre">
               Planning
             </router-link>
           </div>
@@ -80,7 +80,6 @@ import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const links = [
   { text: 'Accueil', to: '/' },
-  { text: 'À propos', to: '/a-propos' },
-  { text: 'Planning', to: '/planning' }
+  { text: 'À propos', to: '/a-propos' }
 ]
 </script>
