@@ -52,6 +52,6 @@ export default {
 
 <style lang="sass" scoped>
 .shadow
-  background-image: radial-gradient(#f4dfce 1px,  #faf7f5 1px)
+  background-image: radial-gradient(#f4dfce9e 1px,  #faf7f5 1px)
   background-size: 5px 5px
 </style>
