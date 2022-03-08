@@ -23,7 +23,7 @@
 </template>
 
 <script>
-import { ref, inject } from 'vue'
+import { ref } from 'vue'
 
 import BaseModal from './BaseModal.vue'
 

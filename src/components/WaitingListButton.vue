@@ -8,8 +8,19 @@ const openModal = ref(false)
 
 
 const handleWaitListSubmit = async(email) => {
-  openModal.value = false
-  $toast.success(`Un email sera envoyé à ${email} dès qu'une place se libèrera pour ${session.topic}.`)
+  if (typeof email !== 'string') return
+  const body = { id: session.tag, email, link: session.url, title: session.topic, timezone: session.timezone, startDate: session.showtime }
+
+  fetch('/.netlify/functions/waitingList', {
+    method: "POST",
+    body: JSON.stringify(body)
+  }).then(res => {
+    openModal.value = false
+    $toast.success(`Un email sera envoyé à ${email} dès qu'une place se libèrera pour ${session.topic}.`)
+  }).catch(err => {
+    openModal.value = false
+    $toast.error(`Votre inscription n'a pas été prise en compte, désolé.`)
+  })
 }
 </script>
 
