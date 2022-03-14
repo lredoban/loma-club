@@ -50,7 +50,7 @@ export default {
           </span>
           <small v-if="!hasTickets" class="absolute text-ocre bottom-0 left-0 -mb-4 ml-3 text-xs lowercase">la liste d'attente</small>
         </a>
-        <WaitingListButton v-else :session="session"/>
+        <!-- <WaitingListButton v-else :session="session"/> -->
       </div>
     </template>
   </div>
