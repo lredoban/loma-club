@@ -79,7 +79,9 @@ import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuIt
 import { MenuIcon, XIcon } from '@heroicons/vue/outline'
 
 const links = [
-  { text: 'Accueil', to: '/' },
+  // { text: 'Accueil', to: '/' },
+  { text: 'Accompagnement individuel', to: '/accompagnement-individuel' },
+  { text: 'Tarifs et sessions', to: '/tarifs' },
   { text: 'À propos', to: '/a-propos' }
 ]
 </script>

@@ -13,7 +13,7 @@ const josepha = computed(() => resolver.render(story.value?.texteJosepha))
       <div class="text-lg max-w-prose mx-auto">
         <h1 class="mt-2 block text-3xl text-center leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">L’histoire du Loma Club</h1>
       </div>
-      <div class="mt-6 prose prose-yellow prose-lg text-gray-700 mx-auto">
+      <div v-if="story" class="mt-6 prose prose-yellow prose-lg text-gray-700 mx-auto">
         <div v-html="histoire"></div>
         <h2 class="!mt-20 text-center">Qui est Josépha ?</h2>
         <div class="lg:grid lg:gap-x-12 lg:grid-rows-1 lg:grid-cols-5 lg:grid-flow-row-dense">

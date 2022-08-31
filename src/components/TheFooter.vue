@@ -19,7 +19,8 @@
 const navigation = {
   main: [
     { name: '@josepha_raphard', href: 'https://www.instagram.com/josepha_raphard/?hl=fr' },
-    // { name: 'Mentions légales & CGV', href: '#' },
+    { name: 'CGU', href: '/conditions-generales-d-utilisation' },
+    { name: 'CGV', href: '/conditions-generales-de-vente' },
     // { name: 'Témoignages', href: '#' },
     // { name: 'Média', href: '#' },
     { name: 'by Lova', href: 'https://lovasoa.fr' },
