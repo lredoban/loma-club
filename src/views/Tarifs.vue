@@ -1,5 +1,50 @@
 <template>
-  <main>
-    <h1>Tarifs</h1>
-  </main>
+  <div>
+    <main class="relative px-4 py-12 sm:px-6 lg:px-8">
+      <section class="my-6 prose prose-yellow prose-lg text-gray-700 mx-auto">
+        <h1>Tarifs et sessions</h1>
+        <p>
+          Les sessions libres et les sessions à thèmes sont au même prix. 
+        </p>
+        <h2>
+          Prix des sessions à l’unité : 
+        </h2>
+        <ul>
+          <li>
+            1 session (1h) : 25€ 
+          </li>
+          <li>
+            1 session longue (2h) : 35€
+          </li>
+        </ul>
+        <h2>
+          Pack de sessions :
+        </h2>
+        <p>
+          Valable pour toutes les sessions sauf les sessions longues de 2h
+        </p>
+        <ul>
+          <li>
+            <a href="https://buy.stripe.com/14k5mTcYL91T5a0cMM" target="_blank" rel="noopener noreferrer">5 sessions</a> = 115€ soit 23€ la session 
+          </li>
+          <li>
+            <a href="https://buy.stripe.com/8wMcPl1g34LDcCs3cd" target="_blank" rel="noopener noreferrer">10 sessions</a> = 200€ soit 20€ la session
+          </li>
+        </ul>
+        <h2>accompagnement individuel</h2>
+        <p>
+          L’accompagnement individuel est sur mesure, les tarifs varient selon la durée et la densité du suivi. <a href="/accompagnement-individuel">Voir la page dédiée</a>
+        </p>
+      </section>
+    </main>
+  </div>
 </template>
+
+<style>
+.rounded-shadow {
+  opacity: 0.02;
+  background-image: radial-gradient(transparent 4.64334px, black 4.64334px);
+  background-size: 9px 9px;
+  background-color: transparent;
+}
+</style>

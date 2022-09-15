@@ -6,6 +6,8 @@ import Coaching from './views/Coaching.vue'
 import Tarifs from './views/Tarifs.vue'
 import CGV from './views/CGV.vue'
 import CGU from './views/CGU.vue'
+import Success from './views/Success.vue'
+import Promo from './views/Promo.vue'
 
 /** @type {import('vue-router').RouterOptions['routes']} */
 export let routes = [
@@ -16,5 +18,7 @@ export let routes = [
   { path: '/tarifs', component: Tarifs, meta: { title: 'Tarifs et sessions' }, name: 'tarifs' },
   { path: '/conditions-generales-de-vente', component: CGV, meta: { title: 'Conditions générales de vente' }, name: 'CGV' },
   { path: '/conditions-generales-d-utilisation', component: CGU, meta: { title: 'Conditions générales d\'utilisation' }, name: 'CGU' },
+  { path: '/success', component: Success, meta: { title: 'Email enrigistré' }, name: 'Success' },
+  { path: '/promo', component: Promo, meta: { title: 'Email enrigistré' }, name: 'Promo' },
   { path: '/:path(.*)', component: NotFound, name: '404' }
 ]

@@ -1,9 +1,24 @@
 <template>
   <main class="mx-auto py-6 px-2 border-ocre md:px-6">
-    <h1 class="text-5xl text-center absolute opacity-0">
+    <h1 class="text-5xl text-center absolute opacity-0 pointer-events-none">
       Le planning
     </h1>
     <div v-html="html"></div>
+    <div>
+        <ul>
+          <li>
+            <a href="https://buy.stripe.com/14k5mTcYL91T5a0cMM" target="_blank" rel="noopener noreferrer">Acheter un pack de 5 sessions</a> = 115€ soit 23€ la session 
+          </li>
+          <li>
+            <a href="https://buy.stripe.com/8wMcPl1g34LDcCs3cd" target="_blank" rel="noopener noreferrer">Acheter un pack de 10 sessions</a> = 200€ soit 20€ la session
+          </li>
+          <li>
+            <a href="/promo">
+              Comment utiliser un code promo
+            </a>
+          </li>
+        </ul>
+    </div>
     <div v-if="sessions.length === 0" class="h-screen w-full flex items-center justify-center -mt-16 -mb-48">
       <span class="animate-bounce -mt-24 text-4xl">
         Chargement
