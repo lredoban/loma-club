@@ -34,8 +34,14 @@
   <body>
     <div id="app"></div>
     <!-- So netlify can handle JS rendered form in CTASection-->
-    <form netlify class="hidden" name="newsletter">
-      <input type="hidden" name="email" />
+    <form
+      netlify
+      hidden
+      name="newsletter"
+      action="/success"
+      netlify-honeypot="bot-field"
+    >
+      <input type="email" name="email" />
     </form>
     <script type="module" src="/src/main.js"></script>
   </body>
