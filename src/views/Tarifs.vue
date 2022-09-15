@@ -25,10 +25,10 @@
         </p>
         <ul>
           <li>
-            <a href="https://buy.stripe.com/14k5mTcYL91T5a0cMM" target="_blank" rel="noopener noreferrer">5 sessions</a> = 115€ soit 23€ la session 
+            <a href="https://buy.stripe.com/14k5mTcYL91T5a0cMM" target="_blank" rel="noopener noreferrer">5 sessions</a> = 115€ soit 23€ la session (pack valide 3 mois)
           </li>
           <li>
-            <a href="https://buy.stripe.com/8wMcPl1g34LDcCs3cd" target="_blank" rel="noopener noreferrer">10 sessions</a> = 200€ soit 20€ la session
+            <a href="https://buy.stripe.com/8wMcPl1g34LDcCs3cd" target="_blank" rel="noopener noreferrer">10 sessions</a> = 200€ soit 20€ la session (pack valide 6 mois)
           </li>
         </ul>
         <h2>accompagnement individuel</h2>
