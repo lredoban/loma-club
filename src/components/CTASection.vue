@@ -7,7 +7,7 @@
         <span class="block text-ocre">{{ story.CTA2 }}</span>
       </h2>
       <div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
-        <form class="mt-8 sm:flex" data-netlify="true" action="/success">
+        <form class="mt-8 sm:flex" netlify action="/success" name="newsletter">
           <label for="email-address" class="sr-only">Email address</label>
           <input id="email-address" name="email" type="email" autocomplete="email" required
             class="w-full rounded-md border-gray-300 px-5 py-3 placeholder-gray-500 focus:border-ocre-500 focus:ring-ocre-500 sm:max-w-xs"
