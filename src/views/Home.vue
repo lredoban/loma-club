@@ -1,10 +1,5 @@
 <template>
   <main>
-    <!-- So netlify can handle JS rendered form in CTASection-->
-    <form netlify class="hidden">
-      <input type="hidden" name="form-name" value="newsletter" />
-      <input type="hidden" name="email">
-    </form>
     <template v-if="!!story">
       <Hero :story="story" />
       <CTASection :story="story" />
