@@ -1,7 +1,7 @@
 <template>
   <div>
     <main class="relative px-4 py-12 sm:px-6 lg:px-8">
-      <section class="my-6 prose prose-yellow prose-lg text-gray-700 mx-auto">
+      <section class="my-6 prose prose-yellow text-gray-700 mx-auto md:prose-lg">
         <h1>
           Pack de sessions :
         </h1>
