@@ -3,7 +3,7 @@
     <main class="relative px-4 py-12 sm:px-6 lg:px-8">
       <section class="my-6 prose prose-yellow prose-lg text-gray-700 mx-auto">
         <h1>
-          Pack de sessions :
+          Pack de sessions :
         </h1>
         <p>
           Valable pour toutes les sessions sauf les sessions longues de 2h
