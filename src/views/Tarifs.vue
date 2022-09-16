@@ -2,24 +2,9 @@
   <div>
     <main class="relative px-4 py-12 sm:px-6 lg:px-8">
       <section class="my-6 prose prose-yellow prose-lg text-gray-700 mx-auto">
-        <h1>Tarifs et sessions</h1>
-        <p>
-          Les sessions libres et les sessions à thèmes sont au même prix. 
-        </p>
-        <h2>
-          Prix des sessions à l’unité : 
-        </h2>
-        <ul>
-          <li>
-            1 session (1h) : 25€ 
-          </li>
-          <li>
-            1 session longue (2h) : 35€
-          </li>
-        </ul>
-        <h2>
+        <h1>
           Pack de sessions :
-        </h2>
+        </h1>
         <p>
           Valable pour toutes les sessions sauf les sessions longues de 2h
         </p>
@@ -31,10 +16,9 @@
             <a href="https://buy.stripe.com/8wMcPl1g34LDcCs3cd" target="_blank" rel="noopener noreferrer">10 sessions</a> = 200€ soit 20€ la session (pack valide 6 mois)
           </li>
         </ul>
-        <h2>accompagnement individuel</h2>
-        <p>
-          L’accompagnement individuel est sur mesure, les tarifs varient selon la durée et la densité du suivi. <a href="/accompagnement-individuel">Voir la page dédiée</a>
-        </p>
+        <a href="/promo">
+          Comment utiliser un code promo
+        </a>
       </section>
     </main>
   </div>
