@@ -3,7 +3,7 @@
     <template v-if="!!story">
       <Hero :story="story" />
       <CTASection :story="story" />
-      <Features :features="story.Features" />
+      <Features :features="story.Features" class="bg-dots"/>
       <TestimonialsSection :temoignages="story.Temoignages" />
       <MediasSections :links="story.Links" />
       <FAQSection id="faq" :questions="story.FAQ" />

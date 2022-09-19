@@ -16,7 +16,7 @@ export let routes = [
   { path: '/planning', component: Planning, meta: { title: 'Planning' }, name: 'planning' },
   { path: '/a-propos', component: About, meta: { title: 'À propos du Loma Club' }, name: 'about' },
   { path: '/accompagnement-individuel', component: Coaching, meta: { title: 'Accompagnement individuel' }, name: 'coaching' },
-  { path: '/tarifs', component: Tarifs, meta: { title: 'Tarifs et sessions' }, name: 'tarifs' },
+  { path: '/tarifs', component: Tarifs, meta: { title: 'Tarifs et packs' }, name: 'tarifs' },
   { path: '/conditions-generales-de-vente', component: CGV, meta: { title: 'Conditions générales de vente' }, name: 'CGV' },
   { path: '/conditions-generales-d-utilisation', component: CGU, meta: { title: 'Conditions générales d\'utilisation' }, name: 'CGU' },
   { path: '/success', component: Success, meta: { title: 'Email enrigistré' }, name: 'Success' },

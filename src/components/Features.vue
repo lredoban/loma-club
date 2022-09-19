@@ -1,19 +1,23 @@
 <template>
-  <div class="py-12 bg-white shadow">
+  <div class="py-12">
     <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-7xl lg:px-8">
+      <div v-if="$slots.header" class="mb-6">
+        <slot name="header"></slot>
+      </div>
       <dl class="space-y-10 lg:space-y-0 lg:grid lg:grid-cols-3 lg:gap-8">
-        <div v-for="{ Titre, Texte, Icon } in features" :key="Titre">
+        <component :is="Link ? 'a' : 'div'" v-for="{ Titre, Texte, Icon, Link } in features" :key="Titre" :href="Link?.url" :class="Link && 'block no-underline'">
           <dt>
             <div class="flex items-center justify-center h-14 w-14">
               <img :src="Icon.filename" :alt="Titre" />
             </div>
             <p class="mt-5 text-ocre text-lg leading-6 font-semibold tracking-widest">{{ Titre }}</p>
           </dt>
-          <dd class="mt-2 text-base text-gray-800">
-            {{ Texte }}
-          </dd>
-        </div>
+          <dd class="mt-2 text-base text-gray-800" v-html="Texte"></dd>
+        </component>
       </dl>
+      <div v-if="$slots.default" class="mt-6">
+        <slot></slot> 
+      </div>
     </div>
   </div>
 </template>
@@ -49,9 +53,3 @@ export default {
   }
 }
 </script>
-
-<style lang="sass" scoped>
-.shadow
-  background-image: radial-gradient(#f4dfce9e 1px,  #faf7f5 1px)
-  background-size: 5px 5px
-</style>

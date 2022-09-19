@@ -1,26 +1,30 @@
+<script setup>
+import { computed } from 'vue-demi'
+import useStoryblok from '../storyblok'
+import Features from '../components/Features.vue'
+
+const { story, resolver } = useStoryblok('tarifs')
+const features = computed(() => {
+  console.warn({story: story?.value?.features})
+  return story?.value?.features.map(f => ({ ...f, Texte: resolver.render(f.Texte) }))
+})
+</script>
+
+
 <template>
   <div>
-    <main class="relative px-4 py-12 sm:px-6 lg:px-8">
-      <section class="my-6 prose prose-yellow text-gray-700 mx-auto md:prose-lg">
-        <h1>
-          Pack de sessions :
-        </h1>
-        <p>
-          Valable pour toutes les sessions sauf les sessions longues de 2h
-        </p>
-        <ul>
-          <li>
-            <a href="https://buy.stripe.com/14k5mTcYL91T5a0cMM" target="_blank" rel="noopener noreferrer">5 sessions</a> = 115€ soit 23€ la session (pack valide 3 mois)
-          </li>
-          <li>
-            <a href="https://buy.stripe.com/8wMcPl1g34LDcCs3cd" target="_blank" rel="noopener noreferrer">10 sessions</a> = 200€ soit 20€ la session (pack valide 6 mois)
-          </li>
-        </ul>
+    <Features v-if="features" :features="features">
+      <template v-slot:header>
+        <div class="prose prose-sm">
+          <h1 p>Tarifs et packs</h1>
+        </div>
+      </template>
+      <div class="prose prose-sm prose-yellow">
         <a href="/promo">
           Comment utiliser un code promo
         </a>
-      </section>
-    </main>
+      </div>
+    </Features>
   </div>
 </template>
 
