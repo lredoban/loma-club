@@ -19,8 +19,8 @@ const features = computed(() => {
           <h1 p>Tarifs et packs</h1>
         </div>
       </template>
-      <div class="prose prose-sm prose-yellow">
-        <a href="/promo">
+      <div>
+        <a href="/promo" class="text-xl btn">
           Comment utiliser un code promo
         </a>
       </div>
