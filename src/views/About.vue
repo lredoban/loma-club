@@ -22,7 +22,7 @@ const josepha = computed(() => resolver.render(story.value?.texteJosepha))
           </div>
           <div class="lg:row-start-1 lg:col-start-3 lg:col-span-3" v-html="josepha"></div>
         </div>
-        <h2 class="!mt-24 text-center">Méres, la puissance de l'armée</h2>
+        <h2 class="!mt-24 text-center">Méres, la puissance de l'armée pacifique</h2>
         <div class="md:w-1/2 mx-auto">
           <a href="https://www.leslibraires.fr/livre/21693817-meres-la-puissance-de-l-armee-pacifique-josepha-raphard-hachette-pratique " target="_blank" rel="noopener noreferrer">
             <img class="" :src="story.imageMeres.filename"
