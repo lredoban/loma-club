@@ -5,6 +5,7 @@ import useStoryblok from '../storyblok'
 const { story, resolver } = useStoryblok('a-propos')
 const histoire = computed(() => resolver.render(story.value?.histoire))
 const josepha = computed(() => resolver.render(story.value?.texteJosepha))
+const meres = computed(() => resolver.render(story.value?.texteMeres))
 </script>
 
 
@@ -18,11 +19,18 @@ const josepha = computed(() => resolver.render(story.value?.texteJosepha))
         <h2 class="!mt-20 text-center">Qui est Josépha ?</h2>
         <div class="lg:grid lg:gap-x-12 lg:grid-rows-1 lg:grid-cols-5 lg:grid-flow-row-dense">
           <div class="relative aspect-w-16 aspect-h-9 md:aspect-h-6 lg:row-start-1 lg:col-start-1 lg:col-span-2">
-            <img class="absolute !m-0 inset-0 object-cover object-top rounded-lg" src="/img/JosephaRaphard.jpg" alt="Josépha Raphard créatrice du Loma club" width="1310" height="873" />
+            <img class="absolute !m-0 inset-0 object-cover object-center rounded-lg" :src="story.imageJosepha.filename" alt="Josépha Raphard créatrice du Loma club" width="1310" height="873" />
           </div>
           <div class="lg:row-start-1 lg:col-start-3 lg:col-span-3" v-html="josepha"></div>
         </div>
         <h2 class="!mt-24 text-center">Meufs & Méres</h2>
+        <div class="lg:grid lg:gap-x-12 lg:grid-rows-1 lg:grid-cols-5 lg:grid-flow-row-dense">
+          <div class="lg:row-start-1 lg:col-start-1 lg:col-span-3" v-html="meres"></div>
+          <div class="relative aspect-w-16 aspect-h-9 min-h-[250px] md:aspect-h-6 lg:row-start-1 lg:col-start-4 lg:col-span-2 lg:min-h-[400px]">
+            <img class="absolute !m-0 inset-0 object-cover object-top rounded-lg" :src="story.imageMeres.filename"
+              alt="Josépha Raphard créatrice du Loma club" width="1310" height="873" />
+          </div>
+        </div>
         <p class="!mb-1">{{ story.caption1 }}</p>
         <div class="mx-auto aspect-w-16 aspect-h-9 bg-pink-500">
           <iframe src="https://www.youtube-nocookie.com/embed/6cyUCrBavpw?start=174s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
