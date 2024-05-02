@@ -29,11 +29,6 @@
           C’est un suivi sur mesure, sur plusieurs semaines, la durée étant fixée ensemble au début de l’accompagnement.
         </p>
         <p>
-          Lors de ce suivi tu trouveras des exercices à effectuer entre les sessions mais aussi des messages WhatsApp
-          qui
-          permettent d’approfondir notre travail.
-        </p>
-        <p>
           Les thèmes de cet accompagnement peuvent aller de la sexualité, au rapport au corps en passant par la
           confiance en soi
           et toutes les problématiques personnelles rencontrées au cours de notre vie de femme.
@@ -46,7 +41,7 @@
           Les modalités du suivi sont envoyées par mail et si ces modalités te conviennent on se rencontre lors d’un
           premier
           rendez-vous. Ce premier rendez vous est gratuit et n’engage à rien, il nous permet de faire connaissance et de
-          se
+          nous
           choisir mutuellement.
         </p>
       </section>
