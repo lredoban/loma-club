@@ -26,39 +26,35 @@
           Qu’est ce que l’accompagnement individuel ?
         </h2>
         <p>
-          L’accompagnement individuel est un accompagnement <strong>haut de gamme, sur mesure,</strong> ouvert à toutes les guerrières pacifiques. Cet accompagnement peut se faire durant le post-partum mais aussi dans les années qui suivent.
+          C’est un suivi sur mesure, sur plusieurs semaines, la durée étant fixée ensemble au début de l’accompagnement.
         </p>
         <p>
-          Ce suivi te permet d'avoir un <strong>safe place et une réelle confidentialité,</strong> nous formerons toi et moi une puissante équipe.
-        </p>
-        <h2>Premier rendez vous </h2>
-        <p>
-          Le premier rendez-vous nous permettra, à toi comme à moi, de nous choisir. <br/>
-          <strong>Les places sont limitées</strong> et pour que notre équipe fonctionne, il est important que la magie opère entre nous. 
+          Lors de ce suivi tu trouveras des exercices à effectuer entre les sessions mais aussi des messages WhatsApp
+          qui
+          permettent d’approfondir notre travail.
         </p>
         <p>
-          <strong>Ce premier rendez-vous est gratuit et n’engage à rien,</strong> il permet de déterminer tes objectifs, tes doutes, tes attentes et de voir ensemble ce qu'on peut mettre en place. Afin de prendre ce premier rendez-vous il est important de bien remplir <a href="https://forms.gle/P3ihzWcRxNsYFTPL9" target="_blank" rel="noopener noreferrer">ce formulaire</a> , plus tu répondras de façon précise aux questions et plus je pourrais commencer à apprendre à te connaître. 
+          Les thèmes de cet accompagnement peuvent aller de la sexualité, au rapport au corps en passant par la
+          confiance en soi
+          et toutes les problématiques personnelles rencontrées au cours de notre vie de femme.
         </p>
-        <h2>
-          Durée et tarifs
-        </h2>
         <p>
-         Les suivis se font le plus souvent sur deux mois et demandent un réel investissement de ta part afin que nous puissions rendre cet accompagnement le plus puissant possible. La fréquence de nos sessions et les tarifs de cet accompagnement individuel sont sur mesure.
+          Pour faire une demande d’accompagnement, il faut remplir <a href="https://forms.gle/P3ihzWcRxNsYFTPL9"
+            target="_blank" rel="noopener noreferrer">ce formulaire</a>.
+        </p>
+        <p>
+          Les modalités du suivi sont envoyées par mail et si ces modalités te conviennent on se rencontre lors d’un
+          premier
+          rendez-vous. Ce premier rendez vous est gratuit et n’engage à rien, il nous permet de faire connaissance et de
+          se
+          choisir mutuellement.
         </p>
       </section>
       <section class="max-w-prose mx-auto text-lg">
         <a href="https://forms.gle/P3ihzWcRxNsYFTPL9" target="_blank" rel="noopener noreferrer"
           class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-ocre shadow-sm hover:bg-ocre hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-ocre">
-          PRENDRE UN PREMIER RENDEZ VOUS
+          FAIRE UNE DEMANDE DE PREMIER RENDEZ-VOUS
         </a>
-      </section>
-      <section class="my-6 prose prose-yellow prose-lg text-gray-700 mx-auto">
-
-        <p>
-          <strong>
-            Important : l’accompagnement individuel ne remplace pas un accompagnement psychologique ou médical quel qu’il soit.
-          </strong>
-        </p>
       </section>
     </main>
   </div>

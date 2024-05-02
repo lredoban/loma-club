@@ -42,9 +42,8 @@ module.exports = {
         black: '#04030F'
       },
       fontFamily: {
-        sans: ['Inter var', ...defaultTheme.fontFamily.sans],
-       'virtual': ['Virtual', ...defaultTheme.fontFamily.serif],
-       'cooper-hewitt': ['CooperHewitt', ...defaultTheme.fontFamily.sans]
+       sans: ['Helvetica Neue', ...defaultTheme.fontFamily.sans],
+       'virtual': ['Virtual', ...defaultTheme.fontFamily.serif]
       },
     },
   },
